@@ -1,0 +1,32 @@
+$transZ: 50vw;
+@mixin transp($axis, $rotate) {
+  @if $axis==x {
+    transform: rotateX($rotate) translateZ($transZ);
+  } @else {
+    transform: rotateY($rotate) translateZ($transZ);
+  }
+}
+
+// RANDOM FLIP EFFECT SETUP
+
+@mixin ranEff($index, $deg) {
+  $rD: rotateX rotateY;
+  $rDeg: (
+    ("(180deg)", "(-180deg)", "(0deg)"),
+    ("(-180deg)", "(180deg)", "(0deg)")
+  );
+
+  & .tile__side--back {
+    transform: nth($rD, $index) + nth(nth($rDeg, $deg), 1);
+  }
+  &:hover .tile__side--front {
+    transform: nth($rD, $index) + nth(nth($rDeg, $deg), 2);
+    transition: all 1s cubic-bezier(0.62, -0.42, 0.36, 0.99);
+  }
+  &:hover .tile__side--back {
+    transform: nth($rD, $index) + nth(nth($rDeg, $deg), 3);
+    transition: all 1s cubic-bezier(0.62, -0.42, 0.36, 0.99);
+  }
+}
+
+// END RANDOM FLIP EFFECT SETUP

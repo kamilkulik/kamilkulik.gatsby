@@ -1,0 +1,120 @@
+$tilePadding: 20px;
+$tileGridHeight: calc(100% - 2 * #{$tilePadding});
+
+.tile {
+  perspective: 1500px;
+  position: relative;
+
+  @for $i from 1 through 9 {
+    $no: random(2);
+    $deg: random(2);
+
+    &--#{$i} {
+      @include ranEff($no, $deg);
+    }
+  }
+
+  &__side {
+    transition: all 1.5s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: $tilePadding;
+
+    &--front {
+      &__img {
+        object-fit: cover;
+        object-position: top;
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    &--back {
+      display: grid;
+      grid-template-areas:
+        "one two"
+        "three three";
+      grid-template-columns: 65% 35%;
+      grid-template-rows: calc(100% / 3 * 2) calc(100% / 3 * 1);
+      font-size: 80%;
+      padding: 1px;
+
+      &-description {
+        // background-color: white;
+        padding: 10%;
+        font-size: 80%;
+        color: white;
+      }
+
+      &-container {
+        justify-content: space-evenly;
+        align-items: flex-end;
+        display: flex;
+        height: 100%;
+        grid-area: three;
+        background-color: rgba(white, 1);
+        padding: 15px;
+      }
+
+      &__techIco {
+        width: 30%;
+        height: 100%;
+        object-fit: contain;
+        object-position: top;
+      }
+
+      &__link {
+        grid-area: two;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        // background-color: white;
+      }
+    }
+  }
+}
+
+$colors: #9f26b5 #00b188 #00a6ce #95d600 #d41b5d #4e5fab;
+
+@for $i from 1 through 9 {
+  $n: random(5);
+
+  .tile--#{$i} {
+    & .tile__side--front,
+    & .tile__side--back {
+      background-color: nth($colors, $n);
+
+      &__heading {
+        font-size: 100%;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: right;
+        // color: white;
+        color: nth($colors, $n);
+        position: absolute;
+        bottom: 5%;
+        right: 0%;
+        width: 100%;
+      }
+
+      &__heading-span {
+        padding: 5% 3% 5% 5%;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        // background-image: linear-gradient(
+        //   to right,
+        //   rgba(white, 0.9),
+        //   rgba(white, 1)
+        // );
+        background-color: rgba(white, 0.95);
+      }
+    }
+  }
+}

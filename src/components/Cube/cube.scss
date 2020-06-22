@@ -1,0 +1,32 @@
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1.8s cubic-bezier(0.94, -0.6, 0.45, 1.31) 0.6s;
+
+  & > div {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+    & > p {
+      color: black;
+      font-size: 8em;
+    }
+  }
+  @each $face, $axis, $deg in (front, y, 0deg), (back, x, 180deg),
+    (left, y, -90deg), (right, y, 90deg), (top, x, 90deg), (bottom, x, -90deg)
+  {
+    .#{$face} {
+      @include transp($axis, $deg);
+
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}

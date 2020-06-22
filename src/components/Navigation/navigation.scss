@@ -1,0 +1,106 @@
+.navigation {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  z-index: 10000;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  font-size: 1.3rem;
+  color: rgba(black, 0.7);
+  padding: 15px;
+  margin: 0px;
+}
+
+.nav {
+  position: relative;
+}
+
+.item {
+  display: grid;
+  // grid-column: 1;
+  // grid-row: 1;
+  grid-template-areas: "one two three four five";
+  grid-template-columns: repeat(5, minmax(1rem, max-content));
+  grid-template-rows: repeat(1, 1fr);
+  align-items: center;
+  height: 3.5rem;
+
+  &:hover {
+    color: black;
+
+    & > .description {
+      display: block;
+    }
+
+    & ~ .effect {
+      border-left: 2px solid black;
+    }
+  }
+}
+
+.effect {
+  position: absolute;
+  z-index: 0;
+  transition: 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ph-line-nav .effect {
+  width: 0px;
+  height: 40px;
+  // bottom: 36px;
+  background: transparent;
+  border-left: 2px solid rgba(black, 0.7);
+}
+
+/* ----- active ----- */
+// sets effect's position based on which li has active class
+.ph-line-nav li.active:nth-child(1) ~ .effect {
+  top: 10%;
+}
+.ph-line-nav li.active:nth-child(2) ~ .effect {
+  top: 31%;
+}
+.ph-line-nav li.active:nth-child(3) ~ .effect {
+  top: 52%;
+}
+.ph-line-nav li.active:nth-child(4) ~ .effect {
+  top: 75%;
+}
+
+/* ----- hover ----- */
+// set's effect position when li is hovered over
+.ph-line-nav li:nth-child(1):hover ~ .effect {
+  top: 10%;
+}
+.ph-line-nav li:nth-child(2):hover ~ .effect {
+  top: 31%;
+}
+.ph-line-nav li:nth-child(3):hover ~ .effect {
+  top: 52%;
+}
+.ph-line-nav li:nth-child(4):hover ~ .effect {
+  top: 75%;
+}
+
+.number {
+  grid-area: three;
+  width: 2rem;
+}
+.description {
+  grid-area: five;
+  display: none;
+}
+
+li {
+  // margin: 5px 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

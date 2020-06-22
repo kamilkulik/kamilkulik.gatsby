@@ -1,0 +1,22 @@
+$paddingTop: 5%;
+$paddingBottom: 4%;
+$padding: $paddingTop 15% $paddingBottom 15%;
+$rowNum: 3;
+$colNum: 3;
+$gap: 20px;
+$gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
+
+.wrapper {
+  display: grid;
+  grid-template-rows: repeat($rowNum, $gridHeight);
+  grid-template-columns: repeat($colNum, auto);
+  gap: $gap;
+
+  padding: $padding;
+  margin: 0px;
+  font-size: 100%;
+  color: black;
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+}
