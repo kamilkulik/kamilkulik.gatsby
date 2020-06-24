@@ -17,7 +17,7 @@
 
     & > p {
       color: black;
-      font-size: 8em;
+      font-size: 2em;
     }
   }
   @each $face, $axis, $deg in (front, y, 0deg), (back, x, 180deg),

@@ -46,7 +46,7 @@ const Portfolio = () => {
       </Tile>
       <Tile tileNumber="3">
         <FrontSide
-          title="Auto-Check24"
+          title="Auto-Check24.pl"
           img={natours}
           alt="Commercial WiX project"
         />

@@ -19,4 +19,5 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   overflow: hidden;
   min-height: 100%;
   width: 100%;
+  @include easeIn;
 }

@@ -30,3 +30,20 @@ $transZ: 50vw;
 }
 
 // END RANDOM FLIP EFFECT SETUP
+
+// CENTER OF THE PAGE
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin easeIn {
+  animation: moveInBottom 1s ease;
+}
+
+@mixin easeOut {
+  animation: moveOutBottom 1s ease;
+}

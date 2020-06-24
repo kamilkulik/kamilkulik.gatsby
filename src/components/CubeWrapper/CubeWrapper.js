@@ -3,6 +3,7 @@ import Container from "../Container/Container"
 import Cube from "../Cube/Cube"
 import Side from "../Side/Side"
 import AppContext from "../../App-context"
+import Home from "../Home/Home"
 import Portfolio from "../Portfolio/PortfolioContainer"
 import useIgnoreMountEffect from "../../Hooks/useIgnoreMountEffect"
 
@@ -21,16 +22,16 @@ const CubeWrapper = () => {
     <Container>
       <Cube>
         <Side sideName={shrink ? `front shrink-front` : `front`}>
-          <p>1</p>
+          {!shrink ? <Home /> : <p>Home</p>}
         </Side>
         <Side sideName={shrink ? `back shrink-back` : `back`}>
-          <p>2</p>
+          <p>About</p>
         </Side>
         <Side sideName={shrink ? `right shrink-right` : `right`}>
-          <Portfolio />
+          {!shrink ? <Portfolio /> : <p>Portfolio</p>}
         </Side>
         <Side sideName={shrink ? `left shrink-left` : `left`}>
-          <p>4</p>
+          <p>Contact</p>
         </Side>
         <Side sideName={shrink ? `top shrink-top` : `top`}>
           <p>5</p>
