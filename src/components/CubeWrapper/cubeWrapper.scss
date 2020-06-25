@@ -1,0 +1,17 @@
+.appearEffect-enter {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+.appearEffect-enter-active {
+  opacity: 1;
+  transform: translateY(0rem);
+  transition: all 1000ms ease;
+}
+.appearEffect-exit {
+  opacity: 1;
+}
+.appearEffect-exit-active {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: all 1000ms ease;
+}

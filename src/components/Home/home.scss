@@ -6,7 +6,7 @@ $angle: 45deg;
   display: flex;
   align-items: center;
   justify-content: center;
-  @include easeIn;
+  // @include easeIn;
 
   &-container {
     height: 100%;

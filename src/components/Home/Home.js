@@ -1,9 +1,8 @@
 import React from "react"
-import { animated } from "react-spring"
 
 const Home = () => {
   return (
-    <animated.section className="home">
+    <section className="home">
       <div className="home-container">
         <div className="home-container--content">
           <h1>Kamil Kulik</h1>
@@ -22,7 +21,7 @@ const Home = () => {
           </div>
         </div>
       </footer>
-    </animated.section>
+    </section>
   )
 }
 

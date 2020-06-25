@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import Container from "../Container/Container"
 import Cube from "../Cube/Cube"
 import Side from "../Side/Side"
@@ -6,15 +6,30 @@ import AppContext from "../../App-context"
 import Home from "../Home/Home"
 import Portfolio from "../Portfolio/PortfolioContainer"
 import useIgnoreMountEffect from "../../Hooks/useIgnoreMountEffect"
+import { CSSTransition } from "react-transition-group"
 
 const CubeWrapper = () => {
-  const { face } = useContext(AppContext)
+  const { face, transitionOut } = useContext(AppContext)
   const [shrink, setShrink] = useState(false)
+  const [content, setContent] = useState(true)
 
   const toggleShrink = () => {
     setShrink(true)
-    window.setTimeout(() => setShrink(false), 3000)
+    setTimeout(() => setShrink(false), 3000)
   }
+
+  const toggleContent = () => {
+    setContent(!content)
+  }
+
+  const enableContent = () => {
+    setTimeout(() => setContent(!content), 3000)
+  }
+
+  console.log(`shrink: ${shrink}`)
+  console.log(`content: ${content}`)
+
+  useIgnoreMountEffect(toggleContent, transitionOut)
 
   useIgnoreMountEffect(toggleShrink, face)
 
@@ -22,7 +37,22 @@ const CubeWrapper = () => {
     <Container>
       <Cube>
         <Side sideName={shrink ? `front shrink-front` : `front`}>
-          {!shrink ? <Home /> : <p>Home</p>}
+          <CSSTransition
+            in={content}
+            timeout={{
+              enter: 1000,
+              exit: 1000,
+            }}
+            classNames="appearEffect"
+            unmountOnExit
+            exit={true}
+            // onEnter={() => setShowButton(false)}
+            onExited={enableContent}
+          >
+            <Home />
+          </CSSTransition>
+
+          {/**!shrink ? <Home /> : <p>Home</p>**/}
         </Side>
         <Side sideName={shrink ? `back shrink-back` : `back`}>
           <p>About</p>

@@ -9,13 +9,20 @@ import AppContext from "../App-context"
 
 function App() {
   const [face, setFace] = useState("home")
+  const [transitionOut, setTransitionOut] = useState(false)
 
   const spinCube = value => () => {
-    setFace(value)
+    setTransitionOut(true)
+    setTimeout(() => {
+      setFace(value)
+    }, 1000)
+    setTimeout(() => {
+      setTransitionOut(false)
+    }, 4000)
   }
 
   return (
-    <AppContext.Provider value={{ face }}>
+    <AppContext.Provider value={{ face, transitionOut }}>
       <SEO title="Home" />
       <CubeWrapper />
       <Navigation spinCube={spinCube} />
