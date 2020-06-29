@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
 const Side = ({ children, sideName }) => {
-  return <div className={sideName}>{children}</div>;
-};
+  return <div className={`cube--side ${sideName}`}>{children}</div>
+}
 
-export default Side;
+export default Side

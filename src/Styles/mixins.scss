@@ -1,7 +1,10 @@
 $transZ: 50vw;
+$transZvh: 50vh;
 @mixin transp($axis, $rotate) {
   @if $axis==x {
     transform: rotateX($rotate) translateZ($transZ);
+  } @else if $axis==z {
+    transform: rotateX($rotate) translateZ($transZvh);
   } @else {
     transform: rotateY($rotate) translateZ($transZ);
   }
