@@ -25,7 +25,7 @@ const Carousel = () => {
           {currentPage.map(story => (
             <CSSTransition
               key={story.flag}
-              timeout={5000}
+              timeout={1000}
               classNames={`carouselFly`}
             >
               {<CarouselPage story={story} key={story.flag} />}

@@ -5,38 +5,40 @@
   background: none;
   border: none;
   z-index: 1000;
+  cursor: pointer;
 
-  &.previous {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%) rotateZ(-180deg);
-    margin: 0 -2rem 0 0;
-  }
-
+  &.previous,
   &.next {
     position: absolute;
     top: 50%;
-    left: 95%;
-    margin: 0 0 0 -2rem;
+  }
+
+  &.previous {
+    left: 12%;
+    transform: translateY(-50%) rotateZ(-180deg);
+    // margin: 0 -2rem 0 0;
+  }
+
+  &.next {
+    right: 12%;
+    // margin: 0 0 0 -2rem;
     transform: translateY(-50%);
   }
 
-  &::before {
-    width: 4rem;
-    height: 2px;
-    background-color: black;
-    display: inline-block;
-    transform: translateY(-0.92rem) rotateZ(45deg);
-    content: "";
-  }
-
+  &::before,
   &::after {
     width: 4rem;
     height: 2px;
     background-color: black;
     display: inline-block;
-    transform: translateY(0.92rem) rotateZ(-45deg);
     content: "";
+  }
+
+  &::before {
+    transform: translateY(-0.92rem) rotateZ(45deg);
+  }
+
+  &::after {
+    transform: translateY(0.92rem) rotateZ(-45deg);
   }
 }

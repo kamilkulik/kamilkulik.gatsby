@@ -13,6 +13,13 @@ const Stories = [
     tools: "Jira, Confluence, Fun Retro",
     description: "Some description",
   },
+  {
+    flag: "Captain Sock",
+    teamSize: "10 actors",
+    budget: "shoestring",
+    tools: "Paper, megaphone",
+    description: "Some description",
+  },
 ]
 
 export default Stories
