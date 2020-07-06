@@ -4,10 +4,7 @@ import Transition from "./Transition"
 
 const CompleteSide = ({ content, shrink, enableContent, side }) => {
   return (
-    <Side
-      // sideName={shrink ? `${side.class} shrink-${side.class}` : `${side.class}`}
-      sideName={`${side.class}`}
-    >
+    <Side sideNumber={side.number}>
       <Transition
         trigger={content}
         shrink={shrink}

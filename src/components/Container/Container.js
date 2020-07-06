@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import AppContext from "../../App-context"
 import useIgnoreMountEffect from "../../Hooks/useIgnoreMountEffect"
 
@@ -13,9 +13,10 @@ const Container = ({ children }) => {
 
   useIgnoreMountEffect(toggleShrink, face)
 
+
   return (
-    <div className={`container ${shrink ? "shrink-container" : ""}`}>
-      {children}
+    <div className="magic">
+    <div className={`container${shrink ? " shrink-container" : ""}`}>{children}</div>
     </div>
   )
 }

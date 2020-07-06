@@ -28,7 +28,7 @@ const CubeWrapper = () => {
 
   useIgnoreMountEffect(toggleShrink, face)
 
-  const pages = ["home", "about", "work", "contact"]
+  const pages = ["home", "project_management", "portfolio", "contact"]
   const activeIndex = pages.indexOf(face)
 
   return (
@@ -41,7 +41,7 @@ const CubeWrapper = () => {
               shrink={shrink}
               enableContent={enableContent}
               content={content}
-              key={side.class}
+              key={side.number}
             />
           )
           return shrink ? component : index === activeIndex ? component : null

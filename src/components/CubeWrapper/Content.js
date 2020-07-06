@@ -1,18 +1,23 @@
 import React from "react"
 import Home from "../Home/Home"
 import Portfolio from "../Portfolio/PortfolioContainer"
+import ProjectManagement from "../ProjectManagement/ProjectManagement"
 
 const Content = [
-  { class: "front", placeholder: "Home", content: <Home /> },
-  { class: "back", placeholder: "About", content: <Home /> },
-  { class: "right", placeholder: "Portfolio", content: <Portfolio /> },
-  { class: "left", placeholder: "Contact", content: <Home /> },
-  { class: "top", placeholder: "5", content: <Home /> },
-  { class: "bottom", placeholder: "6", content: <Home /> },
+  { number: "1", placeholder: "Home", content: <Home /> },
+  {
+    number: "2",
+    placeholder: "Project Management",
+    content: <ProjectManagement />,
+  },
+  { number: "3", placeholder: "Portfolio", content: <Portfolio /> },
+  { number: "4", placeholder: "Contact", content: <Home /> },
+  { number: "5", placeholder: "5", content: <Home /> },
+  { number: "6", placeholder: "6", content: <Home /> },
 ]
 
 export default Content
 
-const Blank = () => {
-  return <p>placeholder</p>
-}
+// const Blank = () => {
+//   return <p>placeholder</p>
+// }
