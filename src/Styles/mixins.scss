@@ -43,6 +43,12 @@ $transZvh: 50vh;
   transform: translate(-50%, -50%);
 }
 
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin easeIn {
   animation: moveInBottom 1s ease;
 }

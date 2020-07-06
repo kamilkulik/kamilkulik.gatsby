@@ -6,8 +6,8 @@ const Cube = ({ children }) => {
   const { face } = useContext(AppContext)
   const cubeRotation = {
     home: "rotateX(0deg) rotateY(0deg) rotateZ(0deg)",
-    about: "rotateX(180deg) rotateY(0deg) rotateZ(0deg)",
-    work: "rotateX(0deg) rotateY(-90deg) rotateZ(0deg)",
+    project_management: "rotateX(0deg) rotateY(-90deg) rotateZ(0deg)",
+    portfolio: "rotateX(180deg) rotateY(0deg) rotateZ(180deg)",
     contact: "rotateX(0deg) rotateY(90deg) rotateZ(0deg)",
   }
 
