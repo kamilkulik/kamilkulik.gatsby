@@ -78,38 +78,63 @@
 ///////// CAROUSEL ANIMATIONS
 ////////////////////////////
 
-.carouselFly-enter {
-  transform: translateX(100%);
+.next {
+  &-enter {
+    transform: translateX(100%);
+
+    &-active {
+      transform: translateX(0);
+      transition: transform 10000ms ease-in-out;
+    }
+  }
+
+  &-exit {
+    transform: translateX(0);
+
+    &-active {
+      transform: translateX(-100%);
+      transition: transform 10000ms ease-in-out;
+    }
+  }
 }
 
-.carouselFly-enter-active {
-  transform: translateX(0);
-  transition: transform 1000ms ease-in-out;
+.previous {
+  &-enter {
+    transform: translateX(-100%);
+
+    &-active {
+      transform: translateX(0);
+      transition: transform 10000ms ease;
+    }
+  }
+
+  &-exit {
+    transform: translateX(0);
+
+    &-active {
+      transform: translateX(100%);
+      transition: transform 10000ms ease;
+    }
+  }
 }
 
-.carouselFly-exit {
-  transform: translateX(0);
-}
+// .carouselFly-next-enter-active {
+// }
 
-.carouselFly-exit-active {
-  transform: translateX(-100%);
-  transition: transform 1000ms ease-in-out;
-}
+// .carouselFly-next-exit {
+// }
+
+// .carouselFly-next-exit-active {
+// }
 
 // .carouselFly-previous-enter {
-//   transform: translateX(-100vw);
 // }
 
 // .carouselFly-previous-enter-active {
-//   transform: translateX(0);
-//   transition: transform 50000ms ease;
 // }
 
 // .carouselFly-previous-exit {
-//   transform: translateX(0);
 // }
 
 // .carouselFly-previous-exit-active {
-//   transform: translateX(100vw);
-//   transition: transform 50000ms ease;
 // }
