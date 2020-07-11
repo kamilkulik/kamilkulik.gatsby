@@ -1,11 +1,11 @@
-import React from "react"
+import useIgnoreMountEffect from "./useIgnoreMountEffect"
 
 const useInMotion = (setHook, timeout, deps) => {
-  React.useEffect(() => {
+  useIgnoreMountEffect(() => {
     setHook(true)
     const motionTimer = setTimeout(() => setHook(false), timeout)
     return () => clearTimeout(motionTimer)
-  }, [deps])
+  }, deps)
 }
 
 export default useInMotion
