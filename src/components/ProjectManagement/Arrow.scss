@@ -11,6 +11,10 @@
   &.next {
     position: absolute;
     top: 50%;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &.previous {

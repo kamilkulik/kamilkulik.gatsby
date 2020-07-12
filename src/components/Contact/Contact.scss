@@ -3,3 +3,164 @@
   height: 100%;
   @include center-flex;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+  width: 50%;
+  padding: 3rem 5rem;
+  transition: all 0.5s;
+  z-index: 1000;
+  background-color: $background;
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+    clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+  }
+  animation: contactForm 30s infinite ease;
+
+  &__submit {
+    height: 3rem;
+  }
+
+  & .input:nth-child(3) {
+    height: 8rem;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  height: 6rem;
+  transition: all 0.5s;
+
+  &__label {
+    display: block;
+    transition: all 0.3s;
+    font-size: 0.8rem;
+  }
+
+  &__textarea,
+  &__input {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-bottom: 2px solid black;
+    transition: all 0.3s;
+    padding: 0.5rem 0 0 0.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(black, 0.1);
+      border-bottom: 2px solid $blue;
+    }
+
+    &:placeholder-shown + .input__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-2rem);
+    }
+  }
+
+  &__textarea {
+    height: 5rem;
+    font-family: inherit;
+  }
+
+  &__error {
+    padding: 0;
+    margin: 0;
+    color: $red;
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes contactForm {
+  0% {
+    clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+  }
+  10% {
+    clip-path: polygon(0% 0%, 95% 5%, 95% 95%, 5% 95%);
+  }
+  20% {
+    clip-path: polygon(0 0, 100% 0, 95% 95%, 5% 95%);
+  }
+  30% {
+    clip-path: polygon(5% 5%, 95% 5%, 100% 100%, 0 100%);
+  }
+  40% {
+    clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+  }
+  50% {
+    clip-path: polygon(5% 5%, 98% 1%, 93% 92%, 5% 95%);
+  }
+  60% {
+    clip-path: polygon(5% 5%, 95% 5%, 94% 95%, 0 100%);
+  }
+  70% {
+    clip-path: polygon(0 0, 95% 5%, 94% 95%, 0 100%);
+  }
+  80% {
+    clip-path: polygon(5% 5%, 100% 0, 100% 100%, 5% 95%);
+  }
+  100% {
+    clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+  }
+}
+
+//////////////////////////////////////
+//////////  SUBMIT BUTTON  ///////////
+//////////////////////////////////////
+
+.form__submit {
+  &,
+  &:link,
+  &:visited {
+    $n: random(5);
+    background-color: nth($colors, $n);
+    color: white;
+    border: none;
+    transition: all 0.5s;
+    font-size: 1.3rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      transform: translateY(-0.4rem);
+      box-shadow: $box-shadow;
+    }
+
+    &:active {
+      transform: translateY(-0.2rem);
+    }
+  }
+}
+
+//////////////////////////////////////
+//////////  ERROR MESSAGE  ///////////
+//////////////////////////////////////
+
+.errorFloat-enter {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+.errorFloat-enter-active {
+  opacity: 1;
+  transform: translateY(0rem);
+  transition: opacity 500ms, transform 500ms ease;
+}
+.errorFloat-exit {
+  opacity: 1;
+}
+.errorFloat-exit-active {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: transform 500ms, opacity 500ms ease;
+}
