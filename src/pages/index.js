@@ -1,17 +1,22 @@
 import React, { useState } from "react"
 import "../Styles/main.scss"
+import useCheckIfMobile from "../Hooks/useCheckIfMobile"
 
 import SEO from "../components/seo"
 
 import CubeWrapper from "../components/CubeWrapper/CubeWrapper"
 import Navigation from "../components/Navigation/Navigation"
+import MobileNavigation from "../components/MobileNavigation/MobileNavigation"
 import AppContext from "../App-context"
 import useInMotion from "../Hooks/useInMotion"
+import Transition from "../components/CubeWrapper/Transition"
 
 function App() {
   const [face, setFace] = useState("home")
   const [transitionOut, setTransitionOut] = useState(false)
   const [inMotion, setInMotion] = useState(false)
+
+  const { mobile } = useCheckIfMobile()
 
   const spinTimeout = 4000
 
@@ -33,7 +38,13 @@ function App() {
     <AppContext.Provider value={{ face, transitionOut }}>
       <SEO title="Home" />
       <CubeWrapper />
-      <Navigation spinCube={spinCube} />
+      {mobile ? (
+        <Transition trigger={!transitionOut} shrink={false} placeholder={null}>
+          <MobileNavigation spinCube={spinCube} />
+        </Transition>
+      ) : (
+        <Navigation spinCube={spinCube} />
+      )}
     </AppContext.Provider>
   )
 }

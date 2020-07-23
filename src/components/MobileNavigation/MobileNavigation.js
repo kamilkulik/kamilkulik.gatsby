@@ -1,0 +1,88 @@
+import React, { useContext, useEffect } from "react"
+import AppContext from "../../App-context"
+import NavigationItem from "./NavigationItem"
+import useCheckIfMobile from "../../Hooks/useCheckIfMobile"
+import House from "../../images/icons/house-door.svg"
+import Easel from "../../images/icons/easel.svg"
+import Chat from "../../images/icons/chat-left-text.svg"
+import People from "../../images/icons/people.svg"
+
+const MobileNavigation = ({ spinCube }) => {
+  const { face } = useContext(AppContext)
+  const pages = ["home", "project_management", "portfolio", "contact"]
+  const activeIndex = pages.indexOf(face)
+
+  const { width } = useCheckIfMobile()
+  const iconWidth = 0.5 * (width / 4)
+
+  return (
+    <div className="mobile-nav">
+      <NavigationItem
+        page={"home"}
+        title={"Home"}
+        handleClick={spinCube}
+        active={0 === activeIndex ? "active" : ""}
+      >
+        <House
+          alt={"house-icon"}
+          width={iconWidth}
+          height={iconWidth}
+          title={"Home"}
+          className={`mobile-nav__item__ico ${
+            0 === activeIndex ? "active" : ""
+          }`}
+        />
+      </NavigationItem>
+      <NavigationItem
+        page={"project_management"}
+        title={"PM"}
+        handleClick={spinCube}
+        active={1 === activeIndex ? "active" : ""}
+      >
+        <People
+          alt={"people-icon"}
+          width={iconWidth}
+          height={iconWidth}
+          title={"Project Management"}
+          className={`mobile-nav__item__ico ${
+            1 === activeIndex ? "active" : ""
+          }`}
+        />
+      </NavigationItem>
+      <NavigationItem
+        page={"portfolio"}
+        title={"Portfolio"}
+        handleClick={spinCube}
+        active={2 === activeIndex ? "active" : ""}
+      >
+        <Easel
+          alt={"portfolio-icon"}
+          width={iconWidth}
+          height={iconWidth}
+          title={"Portfolio"}
+          className={`mobile-nav__item__ico ${
+            2 === activeIndex ? "active" : ""
+          }`}
+        />
+      </NavigationItem>
+      <NavigationItem
+        page={"contact"}
+        title={"Contact"}
+        handleClick={spinCube}
+        active={3 === activeIndex ? "active" : ""}
+      >
+        <Chat
+          alt={"contact-icon"}
+          width={iconWidth}
+          height={iconWidth}
+          title={"Contact"}
+          className={`mobile-nav__item__ico ${
+            3 === activeIndex ? "active" : ""
+          }`}
+        />
+      </NavigationItem>
+    </div>
+  )
+}
+
+export default MobileNavigation

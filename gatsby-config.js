@@ -8,6 +8,14 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: "gatsby-plugin-svgr-loader",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

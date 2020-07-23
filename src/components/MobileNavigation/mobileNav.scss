@@ -1,0 +1,34 @@
+.mobile-nav {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  transform: translate(0%, 0%);
+  width: 100%;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid lightgray;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+
+    &__label {
+      margin: 0;
+    }
+
+    & p.active {
+      color: $red;
+    }
+
+    &__ico.active {
+      fill: $red;
+    }
+  }
+
+  & div.active {
+    border-top: 3px solid $red;
+  }
+}
