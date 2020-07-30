@@ -19,3 +19,12 @@ const useCheckIfMobile = () => {
 }
 
 export default useCheckIfMobile
+
+/*
+
+//////////  DOCUMENTATION  //////////
+
+RETURNS:
+Boolean whether a device is mobile or not
+
+*/

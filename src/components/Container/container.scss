@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   @include center;
+  background: radial-gradient($background, #ffffff);
 }
 
 .container {
@@ -13,7 +14,7 @@
 }
 
 .shrink-container {
-  animation: shrink-container 3s;
+  animation: shrink-container 2s;
   animation-fill-mode: forwards;
 }
 
@@ -29,7 +30,7 @@
   20% {
     transform: scale(var(--scaleX), var(--scaleY));
   }
-  80% {
+  70% {
     transform: scale(var(--scaleX), var(--scaleY));
   }
   100% {

@@ -13,7 +13,7 @@ const CubeWrapper = () => {
 
   const toggleShrink = () => {
     setShrink(true)
-    setTimeout(() => setShrink(false), 3000)
+    setTimeout(() => setShrink(false), 2000)
   }
 
   const toggleContent = () => {
@@ -21,7 +21,7 @@ const CubeWrapper = () => {
   }
 
   const enableContent = () => {
-    setTimeout(() => setContent(!content), 3000)
+    setTimeout(() => setContent(!content), 2000)
   }
 
   useIgnoreMountEffect(toggleContent, transitionOut)

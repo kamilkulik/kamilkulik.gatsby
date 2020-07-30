@@ -12,8 +12,8 @@ const Transition = ({
     <CSSTransition
       in={trigger}
       timeout={{
-        enter: 1000,
-        exit: 1000,
+        enter: 500,
+        exit: 500,
       }}
       classNames="appearEffect"
       unmountOnExit

@@ -18,7 +18,7 @@ function App() {
 
   const { mobile } = useCheckIfMobile()
 
-  const spinTimeout = 4000
+  const spinTimeout = 2700
 
   useInMotion(setInMotion, spinTimeout, face)
 
@@ -27,7 +27,7 @@ function App() {
       setTransitionOut(true)
       setTimeout(() => {
         setFace(value)
-      }, 1000)
+      }, 500)
       setTimeout(() => {
         setTransitionOut(false)
       }, spinTimeout)

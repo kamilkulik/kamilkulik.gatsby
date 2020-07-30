@@ -21,7 +21,7 @@ $base: 100vw;
   top: 50%;
   left: 50%;
   transform-style: preserve-3d;
-  transition: transform 1.8s cubic-bezier(0.94, -0.6, 0.45, 1.31) 0.6s;
+  transition: transform 1s ease-in-out 0.4s;
 
   &--side {
     display: flex;
@@ -44,6 +44,7 @@ $base: 100vw;
 
     @for $i from 0 to 6 {
       &__#{$i + 1} {
+        // background-color: nth($colors, $i);
         transform: if($i < 4, rotateY($i * 90deg), rotateX(pow(-1, $i) * 90deg))
           translateZ(0.5 * if($i < 4, $base, $height));
       }

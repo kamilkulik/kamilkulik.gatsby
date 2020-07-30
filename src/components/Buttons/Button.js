@@ -1,9 +1,9 @@
 import React from "react"
 import style from "./Button.module.scss"
 
-const Button = ({ url, title }) => {
+const Button = ({ url, title, propStyle }) => {
   return (
-    <button className={style.button}>
+    <button className={`${style.button} ${propStyle}`}>
       <a
         href={url}
         target="_blank"

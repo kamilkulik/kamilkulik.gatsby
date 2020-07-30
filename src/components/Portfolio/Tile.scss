@@ -81,7 +81,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 }
 
 @for $i from 1 through 9 {
-  $n: random(5);
+  $n: random(6);
 
   .tile--#{$i} {
     & .tile__side--front,
@@ -105,12 +105,6 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
         padding: 5% 3% 5% 5%;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-
-        // background-image: linear-gradient(
-        //   to right,
-        //   rgba(white, 0.9),
-        //   rgba(white, 1)
-        // );
         background-color: rgba(white, 0.95);
       }
     }
