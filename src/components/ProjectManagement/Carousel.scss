@@ -10,7 +10,14 @@
   margin-top: -15%;
   overflow: hidden;
 
+  &.mobile-version {
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
   @include respond(desktop) {
+    margin-top: 0;
     height: 70%;
     width: 70%;
   }
