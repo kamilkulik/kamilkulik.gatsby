@@ -3,7 +3,7 @@ const setScale = () => {
   const scale = 0.2
 
   let viewportHeight, viewportHeight
-  if (window) {
+  if (typeof window !== `undefined`) {
     viewportWidth = window.innerHeight
     viewportHeight = window.innerWidth
   }

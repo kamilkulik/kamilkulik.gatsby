@@ -1,7 +1,7 @@
 const checkIfMobile = () => {
   let width, height, pr
 
-  if (window) {
+  if (typeof window !== `undefined`) {
     width = window.innerWidth
     height = window.innerHeight
     pr = window.devicePixelRatio // resolution in physical pixels to the resolution in CSS pixels

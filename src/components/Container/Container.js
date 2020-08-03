@@ -8,7 +8,7 @@ const Container = ({ children }) => {
 
   const toggleShrink = () => {
     setShrink(true)
-    if (window) window.setTimeout(() => setShrink(false), 3000)
+    setTimeout(() => setShrink(false), 3000)
   }
 
   useIgnoreMountEffect(toggleShrink, face)
