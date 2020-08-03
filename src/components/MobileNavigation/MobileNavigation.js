@@ -13,7 +13,7 @@ const MobileNavigation = ({ spinCube }) => {
   const activeIndex = pages.indexOf(face)
 
   const { width } = useCheckIfMobile()
-  const iconWidth = 0.5 * (width / 4)
+  const iconWidth = 0.5 * (width / 4.2)
 
   return (
     <div className="mobile-nav">

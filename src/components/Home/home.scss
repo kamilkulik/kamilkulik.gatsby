@@ -3,24 +3,28 @@ $angle: 45deg;
 .home {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // @include easeIn;
 
   &-container {
     height: 100%;
     width: 100%;
-    @include center;
-    // z-index: 100;
+    display: grid;
+    grid-template-areas:
+      " header header header "
+      " left center right "
+      " footer footer footer ";
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
 
     &--content {
-      width: 50%;
-      height: 40%;
-      @include center;
+      grid-area: center;
       white-space: nowrap;
+      align-self: center;
       display: flex;
       flex-direction: column;
+
+      @include respond(desktop) {
+        align-self: flex-end;
+      }
 
       & h1,
       & h4 {
@@ -46,6 +50,10 @@ $angle: 45deg;
         font-size: 5rem;
       }
 
+      & h4 {
+        font-size: 1.7rem;
+      }
+
       &__footer {
         color: lighten(black, 0%);
 
@@ -58,6 +66,7 @@ $angle: 45deg;
     z-index: 1000;
     width: 100%;
     height: 100%;
+    @include center;
     background-color: $background;
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       -webkit-clip-path: polygon(00 71%, 100% 53%, 100% 100%, 0% 100%);
@@ -68,18 +77,32 @@ $angle: 45deg;
     &-container {
       height: 100%;
       width: 100%;
-      @include center;
+      grid-area: center;
+      display: grid;
+      grid-template-areas:
+        " header header header "
+        " left center right "
+        " footer footer footer ";
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+      grid-template-columns: 0.5fr 2fr 0.5fr;
 
       &--content {
-        width: 50%;
-        height: 40%;
-        @include center;
+        grid-area: center;
         white-space: nowrap;
+        align-self: center;
         display: flex;
         flex-direction: column;
 
+        @include respond(desktop) {
+          align-self: flex-end;
+        }
+
         & h1 {
           font-size: 5rem;
+        }
+
+        & h4 {
+          font-size: 1.7rem;
         }
 
         &__footer {

@@ -5,13 +5,14 @@
 }
 
 .carousel {
-  height: 70%;
-  width: 70%;
+  height: 80%;
+  width: 90%;
+  margin-top: -15%;
   overflow: hidden;
 
-  &.mobile-version {
-    height: 100%;
-    width: 100%;
+  @include respond(desktop) {
+    height: 70%;
+    width: 70%;
   }
 
   &--inner-container {
@@ -66,17 +67,18 @@
       align-items: center;
 
       & div:nth-child(1) {
-        font-size: 1rem;
+        font-size: 2rem;
       }
 
       & div:nth-child(2) {
-        font-size: 0.7rem;
+        font-size: 1.2rem;
       }
     }
   }
 
   &__main {
     padding: 2rem;
+    font-size: 1.2rem;
   }
 }
 

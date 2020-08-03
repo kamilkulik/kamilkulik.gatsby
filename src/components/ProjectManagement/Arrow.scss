@@ -23,7 +23,7 @@
     // margin: 0 -2rem 0 0;
 
     @include respond(phone) {
-      left: 2%;
+      left: 1.5rem;
     }
   }
 
@@ -33,24 +33,26 @@
     transform: translateY(-50%);
 
     @include respond(phone) {
-      right: 2%;
+      right: 1.5rem;
     }
   }
 
-  &::before,
+  // &::before,
   &::after {
     width: 4rem;
-    height: 2px;
-    background-color: black;
+    height: 4rem;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: none;
     display: inline-block;
     content: "";
   }
 
-  &::before {
-    transform: translateY(-0.62rem) rotateZ(45deg);
-  }
+  // &::before {
+  //   transform: translateY(-0.74rem) rotateZ(45deg);
+  // }
 
   &::after {
-    transform: translateY(0.62rem) rotateZ(-45deg);
+    transform: /*translateY(0.74rem)*/ rotateZ(-45deg);
   }
 }

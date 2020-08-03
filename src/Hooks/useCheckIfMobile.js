@@ -25,6 +25,10 @@ export default useCheckIfMobile
 //////////  DOCUMENTATION  //////////
 
 RETURNS:
-Boolean whether a device is mobile or not
+On object that includes properties:
+- height -  of inner screen
+- width - of inner screen
+- mobile - Boolean whether a device is mobile or not
+- tablet - Boolean whether a device is a tablet or not
 
 */

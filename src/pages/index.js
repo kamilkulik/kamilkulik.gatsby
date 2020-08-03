@@ -16,7 +16,7 @@ function App() {
   const [transitionOut, setTransitionOut] = useState(false)
   const [inMotion, setInMotion] = useState(false)
 
-  const { mobile } = useCheckIfMobile()
+  const { mobile, tablet } = useCheckIfMobile()
 
   const spinTimeout = 2700
 
@@ -38,7 +38,7 @@ function App() {
     <AppContext.Provider value={{ face, transitionOut }}>
       <SEO title="Home" />
       <CubeWrapper />
-      {mobile ? (
+      {mobile || tablet ? (
         <Transition trigger={!transitionOut} shrink={false} placeholder={null}>
           <MobileNavigation spinCube={spinCube} />
         </Transition>

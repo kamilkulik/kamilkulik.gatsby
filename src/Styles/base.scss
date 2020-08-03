@@ -34,8 +34,28 @@ html {
     font-size: 87.5%;
   }
 
-  @include respond(tablet) {
-    font-size: 75%;
+  @include respond(big-desktop) {
+    font-size: 125%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 87.5%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 100%;
+  }
+
+  // @include respond(tablet) {
+  //   font-size: 75%;
+  // }
+
+  @include respond(phone) {
+    font-size: 68.75%;
+  }
+
+  @include respond(small-phone) {
+    font-size: 56.25%;
   }
 }
 

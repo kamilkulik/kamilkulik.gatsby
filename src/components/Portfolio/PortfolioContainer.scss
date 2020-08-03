@@ -16,7 +16,8 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   @include center-flex;
   @include easeIn;
 
-  &--desktop {
+  &--desktop,
+  &--tablet {
     padding: $padding;
     height: 100%;
     width: 100%;
@@ -24,6 +25,10 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
     grid-template-rows: repeat($rowNum, $gridHeight);
     grid-template-columns: repeat($colNum, auto);
     gap: $gap;
+  }
+
+  &--tablet {
+    padding: $paddingTop 10% $paddingBottom 10%;
   }
 
   &--mobile {

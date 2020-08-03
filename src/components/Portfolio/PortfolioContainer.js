@@ -12,7 +12,7 @@ import useCheckIfMobile from "../../Hooks/useCheckIfMobile"
 // Create mobile presentational component for portfolio project
 
 const Portfolio = () => {
-  const { mobile } = useCheckIfMobile()
+  const { mobile, tablet } = useCheckIfMobile()
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const transitionDur = 1000
@@ -31,8 +31,12 @@ const Portfolio = () => {
           </Carousel>
         </div>
       ) : (
-        <div className="wrapper--desktop">
+        // <div className={tablet ? "wrapper--tablet" : "wrapper--desktop"}>
+        <div className={"wrapper--desktop"}>
           {Content.map((project, index) => {
+            // return tablet ? (
+            //   <MobileBox project={project} slideNo={index} />
+            // ) : (
             return (
               <Tile tileNumber={index + 1} key={project.title}>
                 <FrontSide

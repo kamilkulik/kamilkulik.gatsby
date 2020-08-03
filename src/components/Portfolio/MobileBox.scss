@@ -8,6 +8,11 @@
   flex-direction: column;
   justify-content: space-between;
 
+  // @include respond(tab-port) {
+  //   position: relative;
+  //   padding: 2%;
+  // }
+
   &__img {
     object-fit: cover;
     object-position: top;
