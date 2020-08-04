@@ -11,10 +11,9 @@
   overflow: hidden !important;
 
   &.mobile-version {
-    margin-top: -10%;
+    margin-top: -5%;
     height: 100%;
     width: 100%;
-    overflow: hidden !important;
   }
 
   @include respond(desktop) {

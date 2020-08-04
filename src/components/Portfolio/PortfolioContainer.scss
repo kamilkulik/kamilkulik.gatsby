@@ -36,5 +36,6 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
     width: 90%;
     align-self: flex-start;
     margin-top: 10%;
+    overflow: hidden !important;
   }
 }
