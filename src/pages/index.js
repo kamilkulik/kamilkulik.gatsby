@@ -40,22 +40,13 @@ function App() {
   return (
     <AppContext.Provider value={{ face, transitionOut, mobile }}>
       <SEO title="Home" />
+      <CubeWrapper />
       {mobile || tablet ? (
-        <React.Fragment>
-          <CubeWrapper />
-          <Transition
-            trigger={!transitionOut}
-            shrink={false}
-            placeholder={null}
-          >
-            <MobileNavigation spinCube={spinCube} />
-          </Transition>
-        </React.Fragment>
+        <Transition trigger={!transitionOut} shrink={false} placeholder={null}>
+          <MobileNavigation spinCube={spinCube} />
+        </Transition>
       ) : (
-        <React.Fragment>
-          <CubeWrapper />
-          <Navigation spinCube={spinCube} />
-        </React.Fragment>
+        <Navigation spinCube={spinCube} />
       )}
     </AppContext.Provider>
   )
