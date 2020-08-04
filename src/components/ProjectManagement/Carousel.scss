@@ -7,8 +7,8 @@
 .carousel {
   height: 80%;
   width: 90%;
-  margin-top: -15%;
-  overflow: hidden;
+  margin-top: -20%;
+  overflow: hidden !important;
 
   &.mobile-version {
     margin-top: 0;
