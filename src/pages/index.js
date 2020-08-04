@@ -20,6 +20,7 @@ function App() {
   useCheckMobileViewport()
 
   const { mobile, tablet } = useCheckIfMobile()
+  console.log(tablet)
 
   const spinTimeout = 2700
 
