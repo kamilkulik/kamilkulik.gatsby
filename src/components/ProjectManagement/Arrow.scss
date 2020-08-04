@@ -6,6 +6,7 @@
   border: none;
   z-index: 1000;
   cursor: pointer;
+  position: absolute;
 
   &.previous,
   &.next {
@@ -23,7 +24,7 @@
     // margin: 0 -2rem 0 0;
 
     @include respond(phone) {
-      left: 1.5rem;
+      left: 2rem;
     }
   }
 
@@ -33,7 +34,7 @@
     transform: translateY(-50%);
 
     @include respond(phone) {
-      right: 1.5rem;
+      right: 2rem;
     }
   }
 
