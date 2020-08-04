@@ -3,7 +3,7 @@ import AppContext from "../../App-context"
 import useIgnoreMountEffect from "../../Hooks/useIgnoreMountEffect"
 
 const Container = ({ children }) => {
-  const { face, mobile } = useContext(AppContext)
+  const { face } = useContext(AppContext)
   const [shrink, setShrink] = useState(false)
 
   const toggleShrink = () => {
