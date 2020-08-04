@@ -40,13 +40,17 @@
     }
 
     @for $i from 0 to 6 {
+      $adjustedVw: 0.5 * $base;
+      $adjustedVh: calc(0.5 * var(--vh));
+
       &__#{$i + 1} {
         // background-color: nth($colors, $i);
         transform: if($i < 4, rotateY($i * 90deg), rotateX(pow(-1, $i) * 90deg))
-          translateZ(0.5 * if($i < 4, $base, $height));
+          translateZ(if($i < 4, $adjustedVw, $adjustedVh));
       }
     }
 
+    // translateZ(0.5 * if($i < 4, $base, $height));
     // translateZ(calc(0.5 * if($i < 4, #{$base}, #{var(--vh, $height)})));
 
     &-placeholder {

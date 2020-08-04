@@ -1,18 +1,16 @@
-import React, { useContext, useEffect } from "react"
+import React, { useContext } from "react"
 import AppContext from "../../App-context"
 import NavigationItem from "./NavigationItem"
-import useCheckIfMobile from "../../Hooks/useCheckIfMobile"
 import House from "../../images/icons/house-door.svg"
 import Easel from "../../images/icons/easel.svg"
 import Chat from "../../images/icons/chat-left-text.svg"
 import People from "../../images/icons/people.svg"
 
 const MobileNavigation = ({ spinCube }) => {
-  const { face } = useContext(AppContext)
+  const { face, width } = useContext(AppContext)
   const pages = ["home", "project_management", "portfolio", "contact"]
   const activeIndex = pages.indexOf(face)
 
-  const { width } = useCheckIfMobile()
   const iconWidth = 0.5 * (width / 4.2)
 
   return (

@@ -45,7 +45,9 @@ const ContactForm = () => {
         maxLength={1000}
         setValue={setValue}
       />
-      <input type="submit" value="Submit" className="form__submit" />
+      <button type="submit" className="form__submit">
+        Submit
+      </button>
     </form>
   )
 }

@@ -19,26 +19,28 @@ function App() {
 
   useCheckMobileViewport()
 
-  const { mobile, tablet } = useCheckIfMobile()
+  const { width, mobile, tablet } = useCheckIfMobile()
 
   const spinTimeout = 2700
 
   useInMotion(setInMotion, spinTimeout, face)
 
   const spinCube = value => () => {
-    if (!inMotion) {
-      setTransitionOut(true)
-      setTimeout(() => {
-        setFace(value)
-      }, 500)
-      setTimeout(() => {
-        setTransitionOut(false)
-      }, spinTimeout)
+    if (value !== face) {
+      if (!inMotion) {
+        setTransitionOut(true)
+        setTimeout(() => {
+          setFace(value)
+        }, 500)
+        setTimeout(() => {
+          setTransitionOut(false)
+        }, spinTimeout)
+      }
     }
   }
 
   return (
-    <AppContext.Provider value={{ face, transitionOut, mobile }}>
+    <AppContext.Provider value={{ face, transitionOut, mobile, tablet, width }}>
       <SEO title="Home" />
       <CubeWrapper />
       {mobile || tablet ? (

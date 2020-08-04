@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import AppContext from "../../App-context"
 import Tile from "./Tile"
 import StaticTile from "./StaticTile"
 import FrontSide from "./FrontSide"
@@ -6,13 +7,12 @@ import BackSide from "./BackSide"
 import MobileBox from "./MobileBox"
 import Carousel from "../ProjectManagement/Carousel"
 import Content from "./Content"
-import useCheckIfMobile from "../../Hooks/useCheckIfMobile"
 
 // TO DO
 // Create mobile presentational component for portfolio project
 
 const Portfolio = () => {
-  const { mobile, tablet } = useCheckIfMobile()
+  const { mobile, tablet } = useContext(AppContext)
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const transitionDur = 1000
@@ -32,7 +32,9 @@ const Portfolio = () => {
         </div>
       ) : (
         // <div className={tablet ? "wrapper--tablet" : "wrapper--desktop"}>
-        <div className={"wrapper--desktop"}>
+        <div
+          className={tablet && !mobile ? "wrapper--tablet" : "wrapper--desktop"}
+        >
           {Content.map((project, index) => {
             // return tablet ? (
             //   <MobileBox project={project} slideNo={index} />

@@ -28,14 +28,17 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   }
 
   &--tablet {
-    padding: $paddingTop 10% $paddingBottom 10%;
+    padding: $paddingTop 5% $paddingBottom 5%;
+    height: 85%;
+    align-self: flex-start;
   }
 
   &--mobile {
-    height: 80%;
+    padding: 10% 5%;
+    height: 87%;
     width: 90%;
     align-self: flex-start;
-    margin-top: 5%;
+    // margin-top: 5%;
     overflow: hidden !important;
   }
 }
