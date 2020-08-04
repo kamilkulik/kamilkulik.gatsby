@@ -10,9 +10,11 @@ const useCheckMobileViewport = () => {
     if (typeof window !== undefined) {
       adjustViewportHeight()
       window.addEventListener("resize", adjustViewportHeight)
+      window.addEventListener("orientationchange", adjustViewportHeight)
     }
     return () => {
       window.removeEventListener("resize", adjustViewportHeight)
+      window.addEventListener("orientationchange", adjustViewportHeight)
     }
   }, [])
 }
