@@ -1,0 +1,15 @@
+.mobile-layout {
+  display: grid;
+  grid-template-areas: "content" "navigation";
+  grid-template-columns: 100vw;
+  grid-template-rows: 90vh 10vh;
+  height: 100vh;
+}
+
+.mobile-content {
+  grid-area: content;
+}
+
+.mobile-navigation {
+  grid-area: navigation;
+}

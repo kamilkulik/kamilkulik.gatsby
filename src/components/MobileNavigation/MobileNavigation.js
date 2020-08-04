@@ -16,7 +16,7 @@ const MobileNavigation = ({ spinCube }) => {
   const iconWidth = 0.5 * (width / 4.2)
 
   return (
-    <div className="mobile-nav">
+    <div className="mobile-nav mobile-navigation">
       <NavigationItem
         page={"home"}
         title={"Home"}

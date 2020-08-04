@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  background-color: #eaf1f8;
+  background-color: white;
 }
 
 html {
@@ -73,12 +73,20 @@ $background: #eaf1f8;
 
 $colors: #9f26b5 #00b188 #00a6ce #95d600 #d41b5d #4e5fab;
 
-$height: 100vh;
-$base: 100vw;
-
 //////////////////////////////////////
 ///////////    SHADOW    /////////////
 //////////////////////////////////////
 
 $box-shadow: 0 1rem 2rem rgba(black, 0.1);
 $box-shadow-pressed: 0 0.5rem 1rem rgba(black, 0.1);
+
+//////////////////////////////////////
+///////////    SIZING    /////////////
+//////////////////////////////////////
+
+:root {
+  --vh: 100vh;
+}
+
+$height: 100vh;
+$base: 100vw;

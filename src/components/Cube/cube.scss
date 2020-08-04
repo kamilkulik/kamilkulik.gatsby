@@ -1,6 +1,3 @@
-$height: 100vh;
-$base: 100vw;
-
 @function pow($number, $exponent) {
   $value: 1;
 
@@ -28,9 +25,9 @@ $base: 100vw;
     align-items: center;
     justify-content: center;
 
-    margin: -0.5 * $height (-0.5 * $base);
+    margin: calc(-0.5 * var(--vh, 100vh)) (-0.5 * $base);
     width: $base;
-    height: $height;
+    height: var(--vh, 100vh);
     // backface-visibility: hidden;
 
     box-shadow: 0 0 0 2px;
@@ -49,6 +46,8 @@ $base: 100vw;
           translateZ(0.5 * if($i < 4, $base, $height));
       }
     }
+
+    // translateZ(calc(0.5 * if($i < 4, #{$base}, #{var(--vh, $height)})));
 
     &-placeholder {
       text-transform: uppercase;
