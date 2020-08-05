@@ -7,7 +7,7 @@
 .carousel {
   height: 80%;
   width: 90%;
-  margin-top: -20%;
+  // margin-top: -20%;
   overflow: hidden !important;
   position: relative;
 
@@ -15,6 +15,13 @@
     margin-top: 0%;
     height: 100%;
     width: 100%;
+  }
+
+  &.tablet-version {
+    margin-top: 0%;
+    height: 100%;
+    width: 90%;
+    margin: 0 5% 0 5%;
   }
 
   @include respond(desktop) {
@@ -46,6 +53,7 @@
     @include center-flex;
 
     & > h1 {
+      display: block;
       transform: rotate(-90deg);
       white-space: nowrap;
       font-size: 4rem;
@@ -61,24 +69,46 @@
     grid-template-areas:
       "header"
       "description";
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 35% 65%;
+
+    @include respond(desktop) {
+      grid-template-rows: 30% 70%;
+    }
   }
 
   &__header {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+    padding: 1.5rem 0 0 1.5rem;
+
+    @include respond(desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
 
     &-item {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
 
-      & div:nth-child(1) {
+      @include respond(desktop) {
+        align-items: center;
+      }
+
+      & p {
+        margin: 0;
+        padding: 0;
+      }
+
+      & p:nth-child(1) {
         font-size: 2rem;
       }
 
-      & div:nth-child(2) {
+      & p:nth-child(2) {
         font-size: 1.2rem;
       }
     }

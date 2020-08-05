@@ -9,16 +9,16 @@ const CarouselPage = ({ story }) => {
       <div className="carouselPage__content">
         <header className="carouselPage__header">
           <div className="carouselPage__header-item">
-            <div>Team Size</div>
-            <div>{story.teamSize}</div>
+            <p>Team Size</p>
+            <p>{story.teamSize}</p>
           </div>
           <div className="carouselPage__header-item">
-            <div>Budget</div>
-            <div>{story.budget}</div>
+            <p>Budget</p>
+            <p>{story.budget}</p>
           </div>
           <div className="carouselPage__header-item">
-            <div>Tools</div>
-            <div>{story.tools}</div>
+            <p>Tools</p>
+            <p>{story.tools}</p>
           </div>
         </header>
         <main className="carouselPage__main">

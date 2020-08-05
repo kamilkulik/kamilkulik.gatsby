@@ -45,6 +45,7 @@ const Portfolio = () => {
                   title={project.title}
                   img={project.img}
                   alt={project.alt}
+                  technologies={project.technologies}
                 />
                 <BackSide
                   description={project.description}

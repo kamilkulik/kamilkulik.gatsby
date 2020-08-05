@@ -23,6 +23,10 @@
     transform: translateY(-50%) rotateZ(-180deg);
     // margin: 0 -2rem 0 0;
 
+    @include respond(tab-port) {
+      left: 2.3rem;
+    }
+
     @include respond(phone) {
       left: 2rem;
     }
@@ -32,6 +36,10 @@
     right: 12%;
     // margin: 0 0 0 -2rem;
     transform: translateY(-50%);
+
+    @include respond(tab-port) {
+      right: 2.3rem;
+    }
 
     @include respond(phone) {
       right: 2rem;

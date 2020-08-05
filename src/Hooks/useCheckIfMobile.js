@@ -10,8 +10,10 @@ const useCheckIfMobile = () => {
 
   React.useEffect(() => {
     window.addEventListener("resize", reportWindowSize)
+    window.addEventListener("orientationchange", reportWindowSize)
     return () => {
       window.removeEventListener("resize", reportWindowSize)
+      window.addEventListener("orientationchange", reportWindowSize)
     }
   }, [])
 

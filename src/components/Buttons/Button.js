@@ -1,14 +1,13 @@
 import React from "react"
-import style from "./Button.module.scss"
 
 const Button = ({ url, title, propStyle }) => {
   return (
-    <button className={`${style.button} ${propStyle}`}>
+    <button className={`button ${propStyle}`}>
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className={style.text}
+        className="button__text"
       >
         {title}
       </a>

@@ -27,9 +27,11 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
     gap: $gap;
   }
 
-  &--tablet {
+  &--tablet,
+  &--tabletPM {
     padding: $paddingTop 5% $paddingBottom 5%;
     height: 85%;
+    width: 100%;
     align-self: flex-start;
   }
 

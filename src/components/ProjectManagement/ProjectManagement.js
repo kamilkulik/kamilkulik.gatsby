@@ -11,12 +11,26 @@ const ProjectManagement = () => {
   const transitionDur = 1000
 
   return (
-    <div className={mobile && !tablet ? "wrapper--mobile" : "wrapper"}>
+    <div
+      className={
+        mobile && !tablet
+          ? "wrapper--mobile"
+          : !mobile && tablet
+          ? "wrapper--tabletPM"
+          : "wrapper"
+      }
+    >
       <Carousel
         transitionDuration={transitionDur}
         slides={Stories}
         pageNo={setCarouselPage}
-        classes={mobile && !tablet ? " mobile-version" : ""}
+        classes={
+          mobile && !tablet
+            ? " mobile-version"
+            : !mobile && tablet
+            ? " tablet-version"
+            : ""
+        }
       >
         <CarouselPage story={Stories[carouselPage]} />
       </Carousel>
