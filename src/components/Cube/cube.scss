@@ -61,6 +61,7 @@
       -webkit-text-fill-color: transparent;
       // background-size: 200% 100%;
       text-align: center;
+      margin: auto;
 
       @include respond(phone) {
         font-size: 4rem;

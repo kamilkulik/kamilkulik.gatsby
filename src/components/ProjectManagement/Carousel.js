@@ -1,4 +1,4 @@
-import React, { useState, Children } from "react"
+import React, { useState } from "react"
 import Arrow from "./Arrow"
 import useInMotion from "../../Hooks/useInMotion"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
@@ -34,23 +34,25 @@ const Carousel = ({
   const currentPage = [slides[page]]
 
   return (
-    <div className={`carousel${classes}`}>
+    <React.Fragment>
       {page > 0 && <Arrow previous controls={changePage} />}
-      <div className={`carousel--inner-container ${direction}`}>
-        <TransitionGroup component={null}>
-          {currentPage.map(story => (
-            <CSSTransition
-              key={story.flag}
-              timeout={transitionDuration}
-              classNames={`node`}
-            >
-              {children}
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+      <div className={`carousel${classes}`}>
+        <div className={`carousel--inner-container ${direction}`}>
+          <TransitionGroup component={null}>
+            {currentPage.map(story => (
+              <CSSTransition
+                key={story.flag}
+                timeout={transitionDuration}
+                classNames={`node`}
+              >
+                {children}
+              </CSSTransition>
+            ))}
+          </TransitionGroup>
+        </div>
       </div>
       {page < pageCount && <Arrow next controls={changePage} />}
-    </div>
+    </React.Fragment>
   )
 }
 
