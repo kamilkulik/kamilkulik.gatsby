@@ -8,16 +8,25 @@
   flex-direction: column;
   justify-content: space-between;
 
-  // @include respond(tab-port) {
-  //   position: relative;
-  //   padding: 2%;
-  // }
+  @include respond(phone-land) {
+    display: grid;
+    grid-template-areas:
+      "img description"
+      "technologies link";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
+    padding: 2%;
+  }
 
   &__img {
     object-fit: cover;
     object-position: top;
     position: relative;
     width: 100%;
+
+    @include respond(phone-land) {
+      grid-area: img;
+    }
   }
 
   &__technologies {
@@ -28,6 +37,11 @@
     grid-area: three;
     background-color: rgba(white, 1);
     padding: 15px;
+
+    @include respond(phone-land) {
+      grid-area: technologies;
+      height: 100%;
+    }
   }
 
   &__techIco {
@@ -42,12 +56,23 @@
     font-size: 1.2rem;
     color: white;
     // flex-grow: 1;
+
+    @include respond(phone-land) {
+      grid-area: description;
+      padding: 0 5%;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: space-evenly;
     // height: 5%;
+
+    @include respond(phone-land) {
+      grid-area: link;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -76,6 +101,12 @@
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
         background-color: rgba(white, 0.95);
+      }
+
+      @include respond(phone-land) {
+        grid-area: img;
+        top: 65%;
+        font-size: 1rem;
       }
     }
   }

@@ -5,7 +5,7 @@ import Stories from "./Stories"
 import CarouselPage from "./CarouselPage"
 
 const ProjectManagement = () => {
-  const { mobile, tablet } = useContext(AppContext)
+  const { mobile, tablet, mobileLand } = useContext(AppContext)
   const [carouselPage, setCarouselPage] = useState(0)
 
   const transitionDur = 1000
@@ -13,9 +13,9 @@ const ProjectManagement = () => {
   return (
     <div
       className={
-        mobile && !tablet
+        mobile && !tablet && !mobileLand
           ? "wrapper--mobile"
-          : !mobile && tablet
+          : !mobile && tablet && !mobileLand
           ? "wrapper--tabletPM"
           : "wrapper"
       }
@@ -25,9 +25,9 @@ const ProjectManagement = () => {
         slides={Stories}
         pageNo={setCarouselPage}
         classes={
-          mobile && !tablet
+          mobile && !tablet && !mobileLand
             ? " mobile-version"
-            : !mobile && tablet
+            : !mobile && tablet && !mobileLand
             ? " tablet-version"
             : ""
         }

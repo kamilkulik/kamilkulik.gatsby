@@ -17,7 +17,7 @@ function App() {
   const [transitionOut, setTransitionOut] = useState(false)
   const [inMotion, setInMotion] = useState(false)
 
-  const { width, mobile, tablet } = useCheckIfMobile()
+  const { width, height, mobile, mobileLand, tablet } = useCheckIfMobile()
 
   useCheckMobileViewport()
 
@@ -40,10 +40,12 @@ function App() {
   }
 
   return (
-    <AppContext.Provider value={{ face, transitionOut, mobile, tablet, width }}>
+    <AppContext.Provider
+      value={{ face, transitionOut, mobile, mobileLand, tablet, width, height }}
+    >
       <SEO title="Home" />
       <CubeWrapper />
-      {mobile || tablet ? (
+      {mobile || mobileLand || tablet ? (
         <Transition trigger={!transitionOut} shrink={false} placeholder={null}>
           <MobileNavigation spinCube={spinCube} />
         </Transition>

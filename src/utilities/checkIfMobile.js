@@ -12,10 +12,13 @@ const checkIfMobile = () => {
 
   const mobile = width <= 600 ? true : false
 
+  const mobileLand = width >= 500 && height < 450 ? true : false
+
   const tablet = height > width && width >= 600 ? true : false
 
   return {
     mobile,
+    mobileLand,
     tablet,
     height,
     width,

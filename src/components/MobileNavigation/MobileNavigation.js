@@ -7,11 +7,11 @@ import Chat from "../../images/icons/chat-left-text.svg"
 import People from "../../images/icons/people.svg"
 
 const MobileNavigation = ({ spinCube }) => {
-  const { face, width } = useContext(AppContext)
+  const { face, width, height, mobileLand } = useContext(AppContext)
   const pages = ["home", "project_management", "portfolio", "contact"]
   const activeIndex = pages.indexOf(face)
 
-  const iconWidth = 0.5 * (width / 4.2)
+  const iconWidth = 0.5 * ((mobileLand ? height / 1.4 : width) / 4.2)
 
   return (
     <div className="mobile-nav">

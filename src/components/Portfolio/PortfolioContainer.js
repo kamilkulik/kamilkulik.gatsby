@@ -12,14 +12,14 @@ import Content from "./Content"
 // Create mobile presentational component for portfolio project
 
 const Portfolio = () => {
-  const { mobile, tablet } = useContext(AppContext)
+  const { mobile, tablet, mobileLand } = useContext(AppContext)
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const transitionDur = 1000
 
   return (
     <div className="wrapper">
-      {mobile ? (
+      {mobile || mobileLand ? (
         <div className="wrapper--mobile">
           <Carousel
             slides={Content}

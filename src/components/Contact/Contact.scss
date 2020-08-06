@@ -4,6 +4,11 @@
   @include center-flex;
   padding: 10%;
 
+  @include respond(phone-land) {
+    padding: 3%;
+    justify-content: flex-start;
+  }
+
   @include respond(desktop) {
     padding: 0;
   }
@@ -14,9 +19,9 @@
   flex-direction: column;
   justify-content: center;
   align-self: flex-start;
-  height: 80%;
+  height: 85%;
   width: 100%;
-  padding: 3rem 5rem;
+  padding: 3rem 4rem;
   transition: all 0.5s;
   z-index: 1000;
   background-color: $background;
@@ -25,6 +30,11 @@
     clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
   }
   animation: contactForm 30s infinite ease;
+
+  @include respond(phone-land) {
+    height: 100%;
+    width: 85%;
+  }
 
   @include respond(desktop) {
     align-self: center;
@@ -38,6 +48,14 @@
 
   & .input:nth-child(3) {
     height: 8rem;
+
+    @include respond(phone-land) {
+      height: 6rem;
+    }
+
+    @include respond(phone) {
+      height: 11rem;
+    }
   }
 }
 
@@ -50,10 +68,20 @@
   height: 6rem;
   transition: all 0.5s;
 
+  @include respond(phone-land) {
+    height: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
   &__label {
     display: block;
     transition: all 0.3s;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    color: dimgray;
+
+    @include respond(desktop) {
+      font-size: 0.8rem;
+    }
   }
 
   &__textarea,
@@ -66,6 +94,10 @@
     border-radius: 0px;
     transition: all 0.3s;
     padding: 0.5rem 0 0 0.5rem;
+
+    @include respond(phone-land) {
+      height: 2rem;
+    }
 
     &:focus {
       outline: none;
@@ -83,6 +115,10 @@
   &__textarea {
     height: 5rem;
     font-family: inherit;
+
+    @include respond(phone) {
+      height: 8rem;
+    }
   }
 
   &__error {

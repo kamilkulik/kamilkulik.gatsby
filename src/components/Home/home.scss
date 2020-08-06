@@ -48,10 +48,19 @@ $angle: 45deg;
 
       & h1 {
         font-size: 5rem;
+
+        @include respond(phone-land) {
+          font-size: 4rem;
+          margin: 1rem 0;
+        }
       }
 
       & h4 {
         font-size: 1.7rem;
+
+        @include respond(phone-land) {
+          margin: 1rem 0;
+        }
       }
 
       &__footer {
@@ -99,10 +108,19 @@ $angle: 45deg;
 
         & h1 {
           font-size: 5rem;
+
+          @include respond(phone-land) {
+            font-size: 4rem;
+            margin: 1rem 0;
+          }
         }
 
         & h4 {
           font-size: 1.7rem;
+
+          @include respond(phone-land) {
+            margin: 1rem 0;
+          }
         }
 
         &__footer {
