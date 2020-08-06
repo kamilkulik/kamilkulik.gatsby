@@ -9,11 +9,11 @@ const useCheckMobileViewport = () => {
   React.useEffect(() => {
     adjustViewportHeight()
     window.addEventListener("resize", adjustViewportHeight)
-    window.addEventListener("orientationchange", adjustViewportHeight)
+    window.addEventListener("deviceorientation", adjustViewportHeight)
 
     return () => {
       window.removeEventListener("resize", adjustViewportHeight)
-      window.addEventListener("orientationchange", adjustViewportHeight)
+      window.addEventListener("deviceorientation", adjustViewportHeight)
     }
   }, [])
 }
