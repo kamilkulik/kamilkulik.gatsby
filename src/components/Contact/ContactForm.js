@@ -1,6 +1,12 @@
 import React, { useState } from "react"
 import Input from "./Input"
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const ContactForm = () => {
   const [inputs, setInputs] = useState({
     name: "",
@@ -14,6 +20,15 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    const form = e.target
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": form.getAttribute("name"), ...inputs }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
   }
 
   return (
@@ -23,6 +38,7 @@ const ContactForm = () => {
       name="KamilKulik-form"
       method="post"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="KamilKulik-form" />
       <Input
