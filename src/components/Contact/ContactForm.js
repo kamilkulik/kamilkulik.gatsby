@@ -20,11 +20,11 @@ const ContactForm = () => {
     <form
       onSubmit={handleSubmit}
       className="form"
-      name="KamilKulik form"
-      method="POST"
+      name="KamilKulik-form"
+      method="post"
       data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="KamilKulik form" />
+      <input type="hidden" name="form-name" value="KamilKulik-form" />
       <Input
         type={"text"}
         name={"name"}
