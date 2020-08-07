@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Input from "./Input"
+import Input from "../components/Contact/Input"
 
 function encode(data) {
   return Object.keys(data)
