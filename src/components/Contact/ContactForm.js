@@ -35,12 +35,13 @@ const ContactForm = () => {
     <form
       onSubmit={handleSubmit}
       className="form"
-      name="KamilKulik-form"
+      name="contact"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="KamilKulik-form" />
+      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="form-name" value="contact" />
       <Input
         type={"text"}
         name={"name"}
