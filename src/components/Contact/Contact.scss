@@ -94,6 +94,7 @@
     border-radius: 0px;
     transition: all 0.3s;
     padding: 0.5rem 0 0 0.5rem;
+    font-size: 1.4rem;
 
     @include respond(phone-land) {
       height: 2rem;
