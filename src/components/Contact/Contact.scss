@@ -46,7 +46,7 @@
     height: 3rem;
   }
 
-  & .input:nth-child(3) {
+  & .input:last-of-type {
     height: 8rem;
 
     @include respond(phone-land) {
@@ -76,12 +76,8 @@
   &__label {
     display: block;
     transition: all 0.3s;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: dimgray;
-
-    @include respond(desktop) {
-      font-size: 0.8rem;
-    }
   }
 
   &__textarea,
@@ -94,7 +90,10 @@
     border-radius: 0px;
     transition: all 0.3s;
     padding: 0.5rem 0 0 0.5rem;
+    font-family: inherit;
     font-size: 1.4rem;
+    font-weight: 300;
+    color: black;
 
     @include respond(phone-land) {
       height: 2rem;
@@ -115,7 +114,6 @@
 
   &__textarea {
     height: 5rem;
-    font-family: inherit;
 
     @include respond(phone) {
       height: 8rem;
@@ -177,6 +175,7 @@
     border: none;
     transition: all 0.5s;
     font-size: 1.3rem;
+    width: 100%;
 
     &:focus {
       outline: none;
