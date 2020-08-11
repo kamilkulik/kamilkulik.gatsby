@@ -32,7 +32,7 @@
     }
 
     @include respond(phone) {
-      left: 2rem;
+      left: 1rem;
     }
   }
 
@@ -50,7 +50,7 @@
     }
 
     @include respond(phone) {
-      right: 2rem;
+      right: 1rem;
     }
   }
 
@@ -70,6 +70,6 @@
   // }
 
   &::after {
-    transform: /*translateY(0.74rem)*/ rotateZ(-45deg);
+    transform: translateX(-1.5rem) rotateZ(-45deg);
   }
 }

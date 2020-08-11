@@ -23,7 +23,7 @@
     object-position: top;
     position: relative;
     width: 100%;
-    padding: 5%;
+    padding: 5% 5% 0 5%;
 
     @include respond(phone-land) {
       grid-area: img;
