@@ -11,29 +11,31 @@ const ProjectManagement = () => {
   const transitionDur = 1000
 
   return (
-    <div
-      className={
-        mobile && !tablet && !mobileLand
-          ? "wrapper--mobile"
-          : !mobile && tablet && !mobileLand
-          ? "wrapper--tabletPM"
-          : "wrapper"
-      }
-    >
-      <Carousel
-        transitionDuration={transitionDur}
-        slides={Stories}
-        pageNo={setCarouselPage}
-        classes={
+    <div className="wrapper">
+      <div
+        className={
           mobile && !tablet && !mobileLand
-            ? " mobile-version"
+            ? "wrapper--mobile"
             : !mobile && tablet && !mobileLand
-            ? " tablet-version"
-            : ""
+            ? "wrapper--tabletPM"
+            : "wrapper"
         }
       >
-        <CarouselPage story={Stories[carouselPage]} />
-      </Carousel>
+        <Carousel
+          transitionDuration={transitionDur}
+          slides={Stories}
+          pageNo={setCarouselPage}
+          classes={
+            mobile && !tablet && !mobileLand
+              ? " mobile-version"
+              : !mobile && tablet && !mobileLand
+              ? " tablet-version"
+              : ""
+          }
+        >
+          <CarouselPage story={Stories[carouselPage]} />
+        </Carousel>
+      </div>
     </div>
   )
 }

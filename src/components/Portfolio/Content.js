@@ -24,6 +24,7 @@ import Retrovania from "../../images/Retrovania.png"
 import Expensify from "../../images/Expensify.png"
 import Portfolio from "../../images/Portfolio.png"
 import InvestmentFramework from "../../images/InvestmentFramework.png"
+import { useStaticQuery, graphql } from "gatsby"
 
 // const data = useStaticQuery(graphql`
 //   query {
@@ -40,6 +41,13 @@ import InvestmentFramework from "../../images/InvestmentFramework.png"
 //     }
 //   }
 // `)
+
+// const Image = ({ path, ...props }) => {
+//   const graphqlQuery = useStaticQuery(graphql``)
+//   return <Img />
+// }
+
+// ImgComponent: props => <Image path={"..."} {...props} />,
 
 const Content = [
   {

@@ -81,7 +81,7 @@
     grid-template-areas:
       "header"
       "description";
-    grid-template-rows: 35% 65%;
+    grid-template-rows: 30% 70%;
 
     @include respond(phone-land) {
       grid-template-rows: min-content auto;
@@ -127,8 +127,10 @@
       }
 
       & p:nth-child(1) {
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        // text-transform: uppercase;
+        font-weight: bold;
 
         @include respond(phone-land) {
           font-size: 1.5rem;
@@ -167,10 +169,7 @@
 
     & > span {
       display: inline-block;
-      // margin-bottom: 0.5rem;
-      margin: auto 0;
       padding: 0;
-      margin: 0;
     }
   }
 }

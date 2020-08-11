@@ -5,6 +5,8 @@ import Button from "../Buttons/Button"
 const FrontSide = ({ title, img, alt, links }) => {
   const { mobile, tablet } = useContext(AppContext)
 
+  // <Img  />
+
   return (
     <div className="tile__side tile__side--front">
       <img src={img} alt={alt} className="tile__side--front__img" />

@@ -14,7 +14,6 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   height: 100%;
   width: 100%;
   @include center-flex;
-  @include easeIn;
 
   @include respond(phone-land) {
     padding: $paddingTop 5% $paddingBottom 5%;
@@ -41,9 +40,9 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   }
 
   &--mobile {
-    padding: 10% 5%;
+    padding: 8% 4%;
     height: 92%;
-    width: 90%;
+    width: 92%;
     align-self: flex-start;
     // margin-top: 5%;
     overflow: hidden !important;

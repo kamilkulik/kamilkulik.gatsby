@@ -1,6 +1,5 @@
 import React from "react"
 import Button from "../Buttons/Button"
-import Img from "gatsby-image"
 
 const MobileBox = ({ project, slideNo }) => {
   return (
