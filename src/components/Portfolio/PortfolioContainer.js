@@ -8,9 +8,6 @@ import MobileBox from "./MobileBox"
 import Carousel from "../ProjectManagement/Carousel"
 import Content from "./Content"
 
-// TO DO
-// Create mobile presentational component for portfolio project
-
 const Portfolio = () => {
   const { mobile, tablet, mobileLand } = useContext(AppContext)
 
@@ -31,20 +28,17 @@ const Portfolio = () => {
           </Carousel>
         </div>
       ) : (
-        // <div className={tablet ? "wrapper--tablet" : "wrapper--desktop"}>
         <div
           className={tablet && !mobile ? "wrapper--tablet" : "wrapper--desktop"}
         >
           {Content.map((project, index) => {
-            // return tablet ? (
-            //   <MobileBox project={project} slideNo={index} />
-            // ) : (
             return (
               <Tile tileNumber={index + 1} key={project.title}>
                 <FrontSide
                   title={project.title}
                   img={project.img}
                   alt={project.alt}
+                  links={project.links}
                   technologies={project.technologies}
                 />
                 <BackSide

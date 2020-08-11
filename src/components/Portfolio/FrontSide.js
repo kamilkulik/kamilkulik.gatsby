@@ -1,7 +1,8 @@
 import React, { useContext } from "react"
 import AppContext from "../../App-context"
+import Button from "../Buttons/Button"
 
-const FrontSide = ({ title, img, alt, technologies }) => {
+const FrontSide = ({ title, img, alt, links }) => {
   const { mobile, tablet } = useContext(AppContext)
 
   return (
@@ -11,14 +12,13 @@ const FrontSide = ({ title, img, alt, technologies }) => {
         <span className="tile__side--front__heading-span">{title}</span>
       </h3>
       {!mobile && tablet && (
-        <div className="tile__side--front-container">
-          {technologies &&
-            technologies.map((tech, index) => (
-              <img
+        <div className="tile__side--front__link">
+          {links &&
+            links.map((link, index) => (
+              <Button
                 key={index}
-                src={tech.img}
-                alt={tech.alt}
-                className="tile__side--front__techIco"
+                title={index === 0 ? "live" : "GitHub"}
+                url={link}
               />
             ))}
         </div>

@@ -3,6 +3,7 @@ import "../Styles/main.scss"
 import useCheckIfMobile from "../Hooks/useCheckIfMobile"
 import useInMotion from "../Hooks/useInMotion"
 import useCheckMobileViewport from "../Hooks/useCheckMobileViewport"
+import "normalize.css"
 
 import SEO from "../components/seo"
 

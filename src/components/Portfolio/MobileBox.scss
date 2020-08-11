@@ -3,10 +3,10 @@
   height: 100%;
   width: inherit;
   // background-color: nth($colors, $n);
-  padding: 10%;
+  padding: 1px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
   @include respond(phone-land) {
     display: grid;
@@ -14,7 +14,7 @@
       "img description"
       "technologies link";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: minmax(50%, 70%) min-content;
     padding: 2%;
   }
 
@@ -23,6 +23,7 @@
     object-position: top;
     position: relative;
     width: 100%;
+    padding: 5%;
 
     @include respond(phone-land) {
       grid-area: img;
@@ -31,47 +32,59 @@
 
   &__technologies {
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: center;
     display: flex;
-    height: 20%;
-    grid-area: three;
-    background-color: rgba(white, 1);
-    padding: 15px;
+    flex-wrap: wrap;
+    height: auto;
+
+    background-color: rgba(white, 0.8);
+    padding: 1rem 1rem 0 1rem;
 
     @include respond(phone-land) {
       grid-area: technologies;
-      height: 100%;
     }
   }
 
   &__techIco {
-    width: 30%;
-    height: 100%;
+    height: 3rem;
     object-fit: contain;
     object-position: top;
+    margin: 0 1rem 1rem 0;
+
+    @include respond(phone-land) {
+      height: 1.8rem;
+    }
   }
 
   &__description {
-    padding: 10% 0;
-    font-size: 1.2rem;
+    padding: 5% 10%;
+    font-size: 1.1rem;
     color: white;
-    // flex-grow: 1;
+
+    & > span {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
 
     @include respond(phone-land) {
       grid-area: description;
       padding: 0 5%;
+      font-size: 0.9rem;
     }
   }
 
   &__link {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 8%;
     // height: 5%;
 
     @include respond(phone-land) {
       grid-area: link;
       display: flex;
       align-items: center;
+      align-self: flex-end;
+      margin-bottom: 0;
     }
   }
 }
@@ -92,20 +105,19 @@
       // color: white;
       color: nth($colors, $n);
       position: absolute;
-      top: 2%;
-      right: 0%;
-      width: 100%;
+      top: 0%;
+      left: 0%;
+      width: auto;
 
       &-span {
         padding: 5% 3% 5% 5%;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-        background-color: rgba(white, 0.95);
+        background-color: rgba(white, 0.8);
       }
 
       @include respond(phone-land) {
         grid-area: img;
-        top: 65%;
         font-size: 1rem;
       }
     }

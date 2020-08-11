@@ -21,9 +21,7 @@ const CarouselPage = ({ story }) => {
             <p>{story.tools}</p>
           </div>
         </header>
-        <main className="carouselPage__main">
-          <p>{story.description}</p>
-        </main>
+        <main className="carouselPage__main">{story.description}</main>
       </div>
     </div>
   )

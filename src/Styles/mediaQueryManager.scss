@@ -6,13 +6,19 @@
   }
 
   @if $breakpoint == small-phone {
-    @media only screen and (max-width: 23.4375em) {
+    @media only screen and (max-width: 23.375em) {
       @content;
     }
   }
 
   @if $breakpoint == phone-land {
     @media only screen and (max-width: 56.25em) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-land-small {
+    @media only screen and (max-width: 37.5em) and (orientation: landscape) {
       @content;
     }
   }

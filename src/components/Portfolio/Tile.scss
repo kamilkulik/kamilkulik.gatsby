@@ -1,4 +1,4 @@
-$tilePadding: 20px;
+$tilePadding: 1rem;
 $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 
 .tile {
@@ -27,32 +27,32 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 
     &--front {
       &__img {
-        object-fit: cover;
+        object-fit: contain;
         object-position: top;
-        position: relative;
         width: 100%;
+        height: 100%;
+
+        @include respond(tab-port) {
+          grid-area: image;
+        }
       }
 
       @include respond(tab-port) {
-        &__techIco {
-          width: 30%;
-          height: 100%;
-          object-fit: contain;
-          object-position: top;
-        }
+        display: grid;
+        grid-template-areas:
+          "image"
+          "links";
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 40%;
 
-        &-container {
-          justify-content: space-evenly;
-          align-items: flex-end;
+        &__link {
+          grid-area: links;
+          align-self: end;
           display: flex;
-          // width: 98%;
-          height: 25%;
-          background-color: rgba(white, 1);
-          padding: 15px;
-          position: absolute;
-          bottom: 1px;
-          left: 1px;
-          right: 1px;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          // background-color: white;
         }
       }
     }
@@ -62,43 +62,95 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
       grid-template-areas:
         "one two"
         "three three";
-      grid-template-columns: 65% 35%;
-      grid-template-rows: calc(100% / 3 * 2) calc(100% / 3 * 1);
-      font-size: 90%;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: minmax(60%, 100%) minmax(min-content, 40%);
+
       padding: 1px;
 
       @include respond(tab-port) {
         grid-template-areas:
           "description"
-          "buttons";
+          "technologies";
         grid-template-columns: 100%;
-        grid-template-rows: calc(100% / 3 * 2) calc(100% / 3 * 1);
+        // grid-template-rows: minmax(40%, 80%) min-content;
         font-size: 1.1rem;
       }
 
       &-description {
         // background-color: white;
+        object-fit: contain;
         padding: 5%;
-        font-size: 80%;
+        font-size: 0.6rem;
+        line-height: 0.8rem;
         color: white;
         text-align: justify;
+
+        & > span {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+        }
+
+        @include respond(big-desktop) {
+          font-size: 0.7rem;
+          line-height: 1rem;
+        }
       }
 
       &-container {
         justify-content: space-evenly;
-        align-items: flex-end;
+        align-items: center;
         display: flex;
-        height: 100%;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
         grid-area: three;
         background-color: rgba(white, 1);
-        padding: 15px;
+        padding: 0.5rem 0.5rem 0 0.5rem;
       }
 
       &__techIco {
-        width: 30%;
-        height: 100%;
-        object-fit: contain;
+        // width: 30%;
+        height: 1.2rem;
+        object-fit: scale-down;
         object-position: top;
+
+        &:not(:last-child) {
+          margin: 0 0.5rem 0.5rem 0;
+        }
+
+        &:last-child {
+          margin: 0 0 0.5rem 0;
+        }
+
+        @include respond(big-desktop) {
+          height: 1.5rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        &-description {
+          grid-area: description;
+          font-size: 1rem;
+        }
+
+        &__techIco {
+          // width: 30%;
+          height: 2rem;
+          margin: 0 0.8rem 0.8rem 0;
+        }
+
+        &-container {
+          grid-area: technologies;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+          height: auto;
+          padding: 0.8rem 0.8rem 0 0.8rem;
+          position: absolute;
+          bottom: 1px;
+          left: 1px;
+          right: 1px;
+        }
       }
 
       &__link {
@@ -134,7 +186,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
         // color: white;
         color: nth($colors, $n);
         position: absolute;
-        bottom: 5%;
+        bottom: 0%;
         right: 0%;
         width: 100%;
 
@@ -144,10 +196,10 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
       }
 
       &__heading-span {
-        padding: 5% 3% 5% 5%;
+        padding: 2% 2% 2% 2%;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-        background-color: rgba(white, 0.95);
+        background-color: rgba(white, 0.8);
       }
     }
   }

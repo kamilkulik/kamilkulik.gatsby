@@ -1,5 +1,6 @@
 import React from "react"
 import Button from "../Buttons/Button"
+import Img from "gatsby-image"
 
 const MobileBox = ({ project, slideNo }) => {
   return (
@@ -12,9 +13,7 @@ const MobileBox = ({ project, slideNo }) => {
       <h3 className="carousel-mobile__heading">
         <span className="carousel-mobile__heading-span">{project.title}</span>
       </h3>
-      <div className="carousel-mobile__description">
-        <p>{project.description}</p>
-      </div>
+      <div className="carousel-mobile__description">{project.description}</div>
       <div className="carousel-mobile__link">
         {project.links &&
           project.links.map((link, index) => (
