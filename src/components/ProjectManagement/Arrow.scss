@@ -23,7 +23,7 @@
     // margin: 0 -2rem 0 0;
 
     @include respond(phone-land) {
-      left: 4%;
+      left: 1rem;
     }
 
     @include respond(tab-port) {
@@ -41,7 +41,7 @@
     transform: translateY(-50%);
 
     @include respond(phone-land) {
-      right: 14%;
+      right: 7rem;
     }
 
     @include respond(tab-port) {

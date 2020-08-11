@@ -50,6 +50,7 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
     @include respond(phone-land) {
       padding: 0%;
       height: 100%;
+      width: 100%;
     }
   }
 }

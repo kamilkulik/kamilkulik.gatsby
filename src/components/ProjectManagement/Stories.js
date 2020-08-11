@@ -13,20 +13,19 @@ const Stories = [
         </span>
         <br />
         <span>
-          <b>Approach:</b> instate retrospective session for each team
-          individually and look for patterns
+          <b>Approach:</b> retrospectives for each team individually and look
+          for patterns
         </span>
         <br />
         <span>
-          <b>Wrinkle:</b> reluctance to share negative feedback openly during
-          retros
+          <b>Wrinkle:</b> reluctance to share negative feedback openly
         </span>
         <br />
         <span>
-          <b>Final solution:</b> introduction of funretro.io where people cast
-          opinions anonymously. Also, a dedicated JIRA Kanban board to show
-          progress on retro-driven actions. Retros would start with summary of
-          progress on previous meeting’s findings.
+          <b>Final solution:</b> introduction of funretro.io for sharing
+          anonymous opinions. Dedicated JIRA Kanban board to show progress on
+          retro-driven actions. Retros would start with summary of progress on
+          previous meeting’s findings.
         </span>
       </React.Fragment>
     ),

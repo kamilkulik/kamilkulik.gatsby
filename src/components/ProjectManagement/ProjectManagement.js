@@ -14,7 +14,7 @@ const ProjectManagement = () => {
     <div className="wrapper">
       <div
         className={
-          mobile && !tablet && !mobileLand
+          (mobile && !tablet) || mobileLand
             ? "wrapper--mobile"
             : !mobile && tablet && !mobileLand
             ? "wrapper--tabletPM"

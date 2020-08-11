@@ -81,10 +81,9 @@
     grid-template-areas:
       "header"
       "description";
-    grid-template-rows: 30% 70%;
+    grid-template-rows: min-content auto;
 
     @include respond(phone-land) {
-      grid-template-rows: min-content auto;
     }
   }
 
@@ -151,9 +150,7 @@
     padding: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     text-align: justify;
 
     @include respond(phone-land) {
@@ -167,9 +164,17 @@
       font-size: 1rem;
     }
 
-    & > span {
-      display: inline-block;
-      padding: 0;
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      overflow: auto;
+
+      & > span {
+        display: inline-block;
+        padding: 0;
+      }
     }
   }
 }

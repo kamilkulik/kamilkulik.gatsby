@@ -7,7 +7,6 @@ import firebase from "../../images/firebase-icon.png"
 import jest from "../../images/jest-icon.png"
 import materialui from "../../images/materialui-icon.png"
 import mongoDb from "../../images/mongoDb-icon.png"
-import mongoose from "../../images/mongoose-icon.png"
 import node from "../../images/nodejs-icon.png"
 import react from "../../images/react-icon.png"
 import reactRouter from "../../images/reactRouter-logo.png"
@@ -24,7 +23,7 @@ import Retrovania from "../../images/Retrovania.png"
 import Expensify from "../../images/Expensify.png"
 import Portfolio from "../../images/Portfolio.png"
 import InvestmentFramework from "../../images/InvestmentFramework.png"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
 // const data = useStaticQuery(graphql`
 //   query {
@@ -76,7 +75,6 @@ const Content = [
       { img: redux, alt: "redux icon" },
       { img: reactRouter, alt: "react router icon" },
       { img: mongoDb, alt: "mongoDb icon" },
-      { img: mongoose, alt: "mongoose icon" },
       { img: node, alt: "node icon" },
       { img: jest, alt: "jest" },
     ],
@@ -138,7 +136,6 @@ const Content = [
       { img: reactRouter, alt: "react router icon" },
       { img: node, alt: "node icon" },
       { img: mongoDb, alt: "mongoDb icon" },
-      { img: mongoose, alt: "mongoose icon" },
     ],
     links: ["http://weselekulikow.pl", "http://github.com/kamilkulik"],
   },
