@@ -40,9 +40,9 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   }
 
   &--mobile {
-    padding: 8% 4%;
+    padding: 6% 3%;
     height: 92%;
-    width: 92%;
+    width: 94%;
     align-self: flex-start;
     // margin-top: 5%;
     overflow: hidden !important;
