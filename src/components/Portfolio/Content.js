@@ -15,42 +15,10 @@ import reactNavigation from "../../images/react-navigation-icon.svg"
 import redux from "../../images/Redux-icon.png"
 import js from "../../images/js-icon.png"
 import wix from "../../images/wix-icon.png"
-import Natours from "../../images/Natours.png"
-import AutoCheck from "../../images/AutoCheck24.png"
-import Weselekulikow from "../../images/weselekulikow.png"
-import isItHealthy from "../../images/isItHealthy.png"
-import Retrovania from "../../images/Retrovania.png"
-import Expensify from "../../images/Expensify.png"
-import Portfolio from "../../images/Portfolio.png"
-import InvestmentFramework from "../../images/InvestmentFramework.png"
-// import { useStaticQuery, graphql } from "gatsby"
-
-// const data = useStaticQuery(graphql`
-//   query {
-//     file(relativePath: { eq: "../../images/project-natours.png" }) {
-//       childImageSharp {
-//         fluid {
-//           base64
-//           aspectRatio
-//           src
-//           srcSet
-//           sizes
-//         }
-//       }
-//     }
-//   }
-// `)
-
-// const Image = ({ path, ...props }) => {
-//   const graphqlQuery = useStaticQuery(graphql``)
-//   return <Img />
-// }
-
-// ImgComponent: props => <Image path={"..."} {...props} />,
 
 const Content = [
   {
-    img: Retrovania,
+    img: "Retrovania.png",
     flag: "Retrovania",
     title: "Retrovania",
     alt: "e-Commerce site built during SoftServe's web development bootcamp",
@@ -81,7 +49,7 @@ const Content = [
     links: ["https://www.auto-check24.pl", "http://github.com/kamilkulik"],
   },
   {
-    img: Portfolio,
+    img: "Portfolio.png",
     flag: "Portfolio",
     title: "Portfolio",
     alt: "My Portfolio website",
@@ -108,7 +76,7 @@ const Content = [
     links: ["http://trillo.com", "http://github.com/kamilkulik"],
   },
   {
-    img: Weselekulikow,
+    img: "weselekulikow.png",
     flag: "Wesele_Kulikow",
     title: "Wesele_Kulikow",
     alt: "Website for my brother's wedding",
@@ -140,7 +108,7 @@ const Content = [
     links: ["http://weselekulikow.pl", "http://github.com/kamilkulik"],
   },
   {
-    img: isItHealthy,
+    img: "isItHealthy.png",
     flag: "isItHealthy",
     title: "isItHealthy",
     alt: "React Native image recognition app",
@@ -166,7 +134,7 @@ const Content = [
     links: ["https://www.auto-check24.pl", "http://github.com/kamilkulik"],
   },
   {
-    img: InvestmentFramework,
+    img: "InvestmentFramework.png",
     flag: "Investment_Framework",
     title: "Investment_Framework",
     alt: "Ongoing project for Investment Management",
@@ -195,7 +163,7 @@ const Content = [
     links: ["https://www.auto-check24.pl", "http://github.com/kamilkulik"],
   },
   {
-    img: Expensify,
+    img: "Expensify.png",
     flag: "Expensify",
     title: "Expensify",
     alt: "React expense app with data persistance",
@@ -223,7 +191,7 @@ const Content = [
     links: ["https://www.auto-check24.pl", "http://github.com/kamilkulik"],
   },
   {
-    img: Natours,
+    img: "Natours.png",
     flag: "Natours",
     title: "Natours",
     alt: "Natours advanced SCSS project",
@@ -247,7 +215,7 @@ const Content = [
     links: ["http://natours.com", "http://github.com/kamilkulik"],
   },
   {
-    img: AutoCheck,
+    img: "AutoCheck24.png",
     flag: "AutoCheck24",
     title: "AutoCheck24",
     alt: "Commercial WiX project",

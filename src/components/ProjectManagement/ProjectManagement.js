@@ -26,7 +26,7 @@ const ProjectManagement = () => {
           slides={Stories}
           pageNo={setCarouselPage}
           classes={
-            mobile && !tablet && !mobileLand
+            (mobile && !tablet) || mobileLand
               ? " mobile-version"
               : !mobile && tablet && !mobileLand
               ? " tablet-version"

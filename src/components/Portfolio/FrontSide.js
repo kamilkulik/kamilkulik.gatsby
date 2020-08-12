@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import AppContext from "../../App-context"
 import Button from "../Buttons/Button"
+import MyImg from "../../images/MyImage"
 
 const FrontSide = ({ title, img, alt, links }) => {
   const { mobile, tablet } = useContext(AppContext)
@@ -9,7 +10,7 @@ const FrontSide = ({ title, img, alt, links }) => {
 
   return (
     <div className="tile__side tile__side--front">
-      <img src={img} alt={alt} className="tile__side--front__img" />
+      <MyImg src={img} />
       <h3 className="tile__side--front__heading">
         <span className="tile__side--front__heading-span">{title}</span>
       </h3>

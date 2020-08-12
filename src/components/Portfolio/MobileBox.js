@@ -1,14 +1,11 @@
 import React from "react"
 import Button from "../Buttons/Button"
+import MyImg from "../../images/MyImage"
 
 const MobileBox = ({ project, slideNo }) => {
   return (
     <div className={`carousel-mobile slide--${slideNo + 1}`}>
-      <img
-        src={project.img}
-        alt={project.alt}
-        className="carousel-mobile__img"
-      />
+      <MyImg src={project.img} />
       <h3 className="carousel-mobile__heading">
         <span className="carousel-mobile__heading-span">{project.title}</span>
       </h3>

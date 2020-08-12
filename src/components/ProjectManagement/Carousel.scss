@@ -131,16 +131,47 @@
         // text-transform: uppercase;
         font-weight: bold;
 
+        @include respond(tab-land) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+
         @include respond(phone-land) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+
+        @include respond(phone) {
           font-size: 1.5rem;
+          line-height: 1.5rem;
         }
       }
 
       & p:nth-child(2) {
         font-size: 1.2rem;
 
+        @include respond(tab-land) {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+
         @include respond(phone-land) {
           font-size: 1rem;
+        }
+
+        @include respond(phone) {
+          font-size: 1.3rem;
+          line-height: 1.3rem;
         }
       }
     }
@@ -152,6 +183,16 @@
     line-height: 1.6rem;
     height: 100%;
     text-align: justify;
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
 
     @include respond(phone-land) {
       font-size: 1rem;
