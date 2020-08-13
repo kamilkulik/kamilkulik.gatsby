@@ -4,6 +4,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 .tile {
   perspective: 1500px;
   position: relative;
+  border-radius: 0.5rem;
 
   @for $i from 1 through 9 {
     $no: random(2);
@@ -43,7 +44,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
           "image"
           "links";
         grid-template-columns: 100%;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: 80% 20%;
 
         &__link {
           grid-area: links;
@@ -92,7 +93,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 
         @include respond(big-desktop) {
           font-size: 0.7rem;
-          line-height: 1rem;
+          line-height: 0.9rem;
         }
       }
 
@@ -130,7 +131,8 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
       @include respond(tab-port) {
         &-description {
           grid-area: description;
-          font-size: 1rem;
+          font-size: 0.8rem;
+          line-height: 1rem;
         }
 
         &__techIco {
@@ -179,7 +181,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
       background-color: nth($colors, $n);
 
       &__heading {
-        font-size: 100%;
+        font-size: 1.4rem;
         font-weight: 500;
         text-transform: uppercase;
         text-align: right;
@@ -191,7 +193,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
         width: 100%;
 
         @include respond(tab-port) {
-          top: 45%;
+          top: 0%;
         }
       }
 

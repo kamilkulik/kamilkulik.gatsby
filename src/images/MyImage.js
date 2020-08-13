@@ -10,7 +10,6 @@ const desktopStyling = {
 
 const mobileStyling = {
   position: "relative",
-  padding: "5% 5% 0% 5%",
   width: "100%",
 }
 
@@ -26,7 +25,8 @@ const RenderImage = file => {
       fluid={file.node.childImageSharp.fluid}
       imgStyle={{
         objectFit: "contain",
-        objectPosition: "top",
+        // objectPosition: "top",
+        padding: "5% 5% 0% 5%",
       }}
       style={
         mobile ? mobileStyling : mobileLand ? mobileStylingLand : desktopStyling
