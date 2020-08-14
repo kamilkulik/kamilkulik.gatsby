@@ -11,6 +11,12 @@
     }
   }
 
+  @if $breakpoint == normal-phone {
+    @media only screen and (max-width: 37.5em) and (max-height: 41.75em) and (orientation: portrait) {
+      @content;
+    }
+  }
+
   @if $breakpoint == phone-land {
     @media only screen and (max-width: 56.25em) and (orientation: landscape) {
       @content;

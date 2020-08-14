@@ -3,6 +3,7 @@ import AppContext from "../../App-context"
 import Carousel from "./Carousel"
 import Stories from "./Stories"
 import CarouselPage from "./CarouselPage"
+import { Helmet } from "react-helmet"
 
 const ProjectManagement = () => {
   const { mobile, tablet, mobileLand } = useContext(AppContext)
@@ -12,6 +13,9 @@ const ProjectManagement = () => {
 
   return (
     <div className="wrapper">
+      <Helmet>
+        <title>Project Management</title>
+      </Helmet>
       <div
         className={
           (mobile && !tablet) || mobileLand

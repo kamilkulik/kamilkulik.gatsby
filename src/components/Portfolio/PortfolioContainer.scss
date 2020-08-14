@@ -46,7 +46,6 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
     align-self: flex-start;
     // margin-top: 5%;
     overflow: hidden !important;
-    position: relative;
 
     @include respond(phone-land) {
       padding: 0%;

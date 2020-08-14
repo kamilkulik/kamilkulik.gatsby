@@ -1,8 +1,13 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 const Home = () => {
   return (
     <section className="home">
+      <Helmet>
+        <title>Home Page</title>
+        <link rel="canonical" href="http://kamilkulik.com" />
+      </Helmet>
       <div className="home-container">
         <div className="home-container--content">
           <h1>Kamil Kulik</h1>

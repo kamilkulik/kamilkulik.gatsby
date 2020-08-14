@@ -62,6 +62,10 @@ html {
     font-size: 75%;
   }
 
+  @include respond(normal-phone) {
+    font-size: 62.5%;
+  }
+
   @include respond(small-phone) {
     font-size: 56.25%;
   }

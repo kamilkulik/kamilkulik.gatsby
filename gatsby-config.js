@@ -2,9 +2,14 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Kamil Kulik - front end developer & PM`,
-    description: `Checkout these awesome projects project managed and built by Kamil Kulik`,
-    author: `Kamil Kulik`,
+    title: "Kamil Kulik - Front End developer & PM",
+    titleTemplate: "%s · Kamil Kulik - Front End developer & PM",
+    description:
+      "Kamil Kulik is a detail-oriented Front End developer and effective project manager, using technical know-how and soft skills to plan and deliver every time.",
+    url: "http://www.kamilkulik.com",
+    author: "Kamil Kulik",
+    image: "/images/kamilkulik.com.png",
+    lang: "en",
   },
   plugins: [
     `gatsby-plugin-sass`,

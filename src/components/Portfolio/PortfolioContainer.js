@@ -7,6 +7,7 @@ import BackSide from "./BackSide"
 import MobileBox from "./MobileBox"
 import Carousel from "../ProjectManagement/Carousel"
 import Content from "./Content"
+import { Helmet } from "react-helmet"
 
 const Portfolio = () => {
   const { mobile, tablet, mobileLand } = useContext(AppContext)
@@ -16,6 +17,9 @@ const Portfolio = () => {
 
   return (
     <div className="wrapper">
+      <Helmet>
+        <title>Project Portfolio</title>
+      </Helmet>
       {mobile || mobileLand ? (
         <div className="wrapper--mobile">
           <Carousel
