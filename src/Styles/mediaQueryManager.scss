@@ -58,4 +58,11 @@
       @content;
     }
   }
+
+  @if $breakpoint == mobile-devices {
+    @media only screen and (max-width: 37.5em) and (orientation: portrait),
+      only screen and (max-width: 68.75em) and (orientation: portrait) {
+      @content;
+    }
+  }
 }

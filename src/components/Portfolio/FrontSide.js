@@ -20,7 +20,9 @@ const FrontSide = ({ title, img, alt, links }) => {
             links.map((link, index) => (
               <Button
                 key={index}
-                title={index === 0 ? "live" : "GitHub"}
+                title={
+                  link.includes("github.com/kamilkulik") ? "GitHub" : "Live"
+                }
                 url={link}
               />
             ))}

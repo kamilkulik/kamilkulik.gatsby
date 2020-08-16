@@ -18,7 +18,7 @@
   }
 
   &.previous {
-    left: 12%;
+    left: 7rem;
     transform: translateY(-50%) rotateZ(-180deg);
     // margin: 0 -2rem 0 0;
 
@@ -36,7 +36,7 @@
   }
 
   &.next {
-    right: 12%;
+    right: 7rem;
     // margin: 0 0 0 -2rem;
     transform: translateY(-50%);
 
