@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react"
 import AppContext from "../../App-context"
 import Carousel from "./Carousel"
 import Stories from "./Stories"
-// import CarouselPage from "./CarouselPage"
 import PmCard from "./PmCard"
 import { Helmet } from "react-helmet"
 
@@ -38,7 +37,6 @@ const ProjectManagement = () => {
               : ""
           }
         >
-          {/*<CarouselPage story={Stories[carouselPage]} />*/}
           <PmCard story={Stories[carouselPage]} />
         </Carousel>
       </div>

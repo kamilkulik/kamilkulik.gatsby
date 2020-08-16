@@ -1,4 +1,25 @@
 import React from "react"
+import MyImage from "../../images/MyImage"
+
+const desktopStyling = {
+  height: "100%",
+  width: "100%",
+}
+
+const mobileStyling = {
+  position: "relative",
+  width: "100%",
+}
+
+const mobileStylingLand = {
+  gridArea: "img",
+}
+
+const imgStyle = {
+  objectPosition: "top",
+  height: "100%",
+  width: "100%",
+}
 
 const PmCard = ({ story }) => {
   return (
@@ -26,7 +47,11 @@ const PmCard = ({ story }) => {
         </main>
       </div>
       <div className="pmCard__footer">
-        <img src={story.img} className="pmCard__footer-image" />
+        <MyImage
+          src={story.img}
+          imgStyle={imgStyle}
+          style={{ height: "100%" }}
+        />
       </div>
     </div>
   )

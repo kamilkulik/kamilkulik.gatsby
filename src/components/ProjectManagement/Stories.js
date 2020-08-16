@@ -1,12 +1,8 @@
 import React from "react"
-import kapitan from "../../images/kapitan.jpg"
-import gauge from "../../images/gauge.jpeg"
-import traffic from "../../images/traffic-light.jpeg"
-import tape from "../../images/tape-measure.jpeg"
 
 const Stories = [
   {
-    img: gauge,
+    img: "gauge.jpeg",
     flag: "Scrum Master",
     teamSize: "30 software engineers",
     budget: "$4M per annum",
@@ -34,7 +30,7 @@ const Stories = [
     ),
   },
   {
-    img: tape,
+    img: "tape-measure.jpeg",
     flag: "Project Manager",
     teamSize: "2 DevOps engineers",
     budget: "100k",
@@ -60,7 +56,7 @@ const Stories = [
     ),
   },
   {
-    img: traffic,
+    img: "traffic-light.jpeg",
     flag: "Program Manager",
     teamSize: "3 Project Managers",
     budget: "internal projects",
@@ -87,8 +83,8 @@ const Stories = [
     ),
   },
   {
+    img: "kapitan.jpg",
     flag: "Film Producer",
-    img: kapitan,
     teamSize: "10 actors, 3 film crew",
     budget: "shoestring",
     tools: "Paper, megaphone",

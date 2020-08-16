@@ -1,45 +1,22 @@
-import React, { useContext } from "react"
-import AppContext from "../App-context"
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const desktopStyling = {
-  height: "100%",
-  width: "100%",
-}
-
-const mobileStyling = {
-  position: "relative",
-  width: "100%",
-}
-
-const mobileStylingLand = {
-  gridArea: "img",
-}
-
-const RenderImage = file => {
-  const { mobile, mobileLand } = useContext(AppContext)
-
+const RenderImage = (file, style, imgStyle) => {
   return (
     <Img
       fluid={file.node.childImageSharp.fluid}
-      imgStyle={{
-        objectFit: "contain",
-        // objectPosition: "top",
-        padding: "5% 5% 0% 5%",
-      }}
-      style={
-        mobile ? mobileStyling : mobileLand ? mobileStylingLand : desktopStyling
-      }
+      imgStyle={imgStyle}
+      style={style}
     />
   )
 }
 
-const MyImg = ({ src }) => (
+const MyImg = ({ src, style, imgStyle }) => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { extension: { regex: "/(png)/" } }) {
+        allFile(filter: { extension: { regex: "/(png)|(jpg)|(jpeg)/" } }) {
           edges {
             node {
               extension
@@ -56,7 +33,9 @@ const MyImg = ({ src }) => (
     `}
     render={data =>
       RenderImage(
-        data.allFile.edges.find(image => image.node.relativePath === src)
+        data.allFile.edges.find(image => image.node.relativePath === src),
+        style,
+        imgStyle
       )
     }
   />
