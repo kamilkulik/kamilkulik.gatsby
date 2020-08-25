@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "../Styles/main.scss"
 import useCheckIfMobile from "../Hooks/useCheckIfMobile"
 import useInMotion from "../Hooks/useInMotion"
@@ -26,19 +26,28 @@ function App() {
 
   useInMotion(setInMotion, spinTimeout, face)
 
+  let transition, spin
+
   const spinCube = value => () => {
     if (value !== face) {
       if (!inMotion) {
         setTransitionOut(true)
-        setTimeout(() => {
+        transition = setTimeout(() => {
           setFace(value)
         }, 500)
-        setTimeout(() => {
+        spin = setTimeout(() => {
           setTransitionOut(false)
         }, spinTimeout)
       }
     }
   }
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(transition)
+      clearTimeout(spin)
+    }
+  }, [])
 
   return (
     <AppContext.Provider
