@@ -8,6 +8,24 @@
   grid-template-columns: 15% 65% 20%;
   box-shadow: inset 0rem 0rem 4rem rgba(#000000, 0.1);
 
+  &__link {
+    &:link,
+    &:visited {
+      color: $red;
+      background-color: $background;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $red;
+      font-weight: 500;
+      transform: translateY(-3px) scale(1.2);
+    }
+  }
+
   @include respond(mobile-devices) {
     grid-template-areas:
       "img"

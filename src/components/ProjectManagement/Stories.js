@@ -109,6 +109,7 @@ const Stories = [
             href="https://www.youtube.com/watch?v=mrkucqLZxc0"
             target="_blank"
             rel="noopener noreferrer"
+            class="pmCard__link"
           >
             link
           </a>{" "}
