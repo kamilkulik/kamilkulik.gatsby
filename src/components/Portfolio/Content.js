@@ -106,7 +106,7 @@ const Content = [
       { img: mongoDb, alt: "mongoDb icon" },
     ],
     links: [
-      "http://weselekulikow.pl",
+      "https://weselekulikow.pl",
       "https://github.com/kamilkulik/weselekulikow.pl",
     ],
   },
@@ -164,7 +164,7 @@ const Content = [
       { img: jest, alt: "jest" },
     ],
     links: [
-      "http://investmentframework.com",
+      "https://investmentframework.com",
       "https://github.com/kamilkulik/investmentFramework",
     ],
   },
@@ -196,7 +196,7 @@ const Content = [
     ],
     links: [
       "https://expensify-react-redux-kk.herokuapp.com/",
-      "http://github.com/kamilkulik",
+      "https://github.com/kamilkulik",
     ],
   },
   {

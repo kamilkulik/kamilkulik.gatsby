@@ -6,7 +6,7 @@ const Home = () => {
     <section className="home">
       <Helmet>
         <title>Home Page</title>
-        <link rel="canonical" href="http://kamilkulik.com" />
+        <link rel="canonical" href="https://kamilkulik.com" />
       </Helmet>
       <div className="home-container">
         <div className="home-container--content">

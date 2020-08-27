@@ -6,7 +6,7 @@ module.exports = {
     titleTemplate: "%s · Kamil Kulik - Front End developer & PM",
     description:
       "Kamil Kulik is a detail-oriented Front End developer and effective project manager, using technical know-how and soft skills to plan and deliver every time.",
-    url: "http://www.kamilkulik.com",
+    url: "https://www.kamilkulik.com",
     author: "Kamil Kulik",
     image: "/images/kamilkulik.com.png",
     lang: "en",
