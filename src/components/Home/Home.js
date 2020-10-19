@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import ModeSwitch from "../ModeSwitch/ModeSwitch"
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <title>Home Page</title>
         <link rel="canonical" href="https://kamilkulik.com" />
       </Helmet>
+      <ModeSwitch />
       <div className="home-container">
         <div className="home-container--content">
           <h1>Kamil Kulik</h1>

@@ -1,13 +1,50 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+
+const getInitialState = () => {
+  const savedState = JSON.parse(localStorage.getItem("darkMode"))
+  if (savedState !== null) return savedState
+  return false
+}
 
 const ModeSwitch = () => {
-  const handleClick = () => {
+  const [darkMode, setDarkMode] = useState(getInitialState)
+
+  const setMode = () => {
     const themeAttribute = document.documentElement
-    const theme = themeAttribute.getAttribute("data-theme")
-    if (theme === "dark") themeAttribute.setAttribute("data-theme", "light")
-    else themeAttribute.setAttribute("data-theme", "dark")
+    if (darkMode) {
+      themeAttribute.setAttribute("data-theme", "dark")
+    } else {
+      themeAttribute.setAttribute("data-theme", "light")
+    }
+    saveModePreference()
   }
-  return <button onClick={handleClick}>Switch modes</button>
+
+  useEffect(() => {
+    setMode()
+  }, [darkMode])
+
+  const saveModePreference = () => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode))
+  }
+
+  const handleClick = () => {
+    setDarkMode(prevMode => !prevMode)
+  }
+
+  return (
+    <div class="switch-container">
+      <label
+        class="switch"
+        for="checkbox"
+        title="Change color scheme to dark mode"
+      >
+        <input type="checkbox" id="checkbox" onClick={handleClick} />
+        <div class="slider round"></div>
+        <div class="toggle-moon">🌙</div>
+        <div class="toggle-sun">☀️</div>
+      </label>
+    </div>
+  )
 }
 
 export default ModeSwitch
