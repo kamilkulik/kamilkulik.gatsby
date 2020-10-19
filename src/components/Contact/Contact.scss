@@ -24,7 +24,7 @@
   padding: 3rem 4rem;
   transition: all 0.5s;
   z-index: 1000;
-  background-color: $background;
+  background-color: var(--backgroundAccent);
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     -webkit-clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
     clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
@@ -83,6 +83,7 @@
   &__textarea,
   &__input {
     display: block;
+    background-color: var(--background);
     width: 100%;
     height: 3rem;
     border: none;
@@ -93,7 +94,7 @@
     font-family: inherit;
     font-size: 1.4rem;
     font-weight: 300;
-    color: black;
+    color: var(--normalFont);
 
     @include respond(phone-land) {
       height: 2rem;

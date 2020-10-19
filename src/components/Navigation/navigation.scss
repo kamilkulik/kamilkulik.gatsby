@@ -12,7 +12,7 @@ ul {
   flex-direction: column;
   align-items: space-around;
   font-size: 1.3rem;
-  color: rgba(black, 0.7);
+  color: var(--normalFont);
   padding: 15px;
   margin: 0px;
 }
@@ -32,14 +32,14 @@ ul {
   height: 3.5rem;
 
   &:hover {
-    color: black;
+    color: var(--normalFont);
 
     & > .description {
       display: block;
     }
 
     & ~ .effect {
-      border-left: 2px solid black;
+      border-left: 2px solid var(--normalFont);
     }
   }
 }
@@ -55,7 +55,7 @@ ul {
   height: 40px;
   // bottom: 36px;
   background: transparent;
-  border-left: 2px solid rgba(black, 0.7);
+  border-left: 2px solid var(--normalFont);
 }
 
 /* ----- active ----- */
@@ -95,7 +95,7 @@ ul {
 .description {
   grid-area: five;
   display: none;
-  background-color: white;
+  background-color: var(--background);
   padding: 0px 10px;
 }
 

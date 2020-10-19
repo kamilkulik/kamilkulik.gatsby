@@ -9,7 +9,7 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
 .wrapper {
   margin: 0px;
   font-size: 100%;
-  color: black;
+  color: var(--normalFont);
   overflow: hidden;
   height: 100%;
   width: 100%;

@@ -75,6 +75,20 @@ html {
 ///////////    COLOURS    /////////////
 ///////////////////////////////////////
 
+:root {
+  --background: #fff;
+  --backgroundAccent: #eaf1fb;
+  --lightGray: #a0a0a0;
+  --normalFont: #000;
+}
+
+[data-theme="dark"] {
+  --background: #16171b;
+  --backgroundAccent: #202125;
+  --lightGray: #a0a0a0;
+  --normalFont: #ffffff;
+}
+
 $darkBlue: #4e5fab;
 $blue: #00a6ce;
 $grassGreen: #95d600;
@@ -103,3 +117,15 @@ $box-shadow-pressed: 0 0.5rem 1rem rgba(black, 0.1);
 
 $height: 100vh;
 $base: 100vw;
+
+//////////////////////////////////////
+///////////   DARK MODE  /////////////
+//////////////////////////////////////
+
+$darkBackground: #16171b;
+$darkBGAccent: #202125;
+$darkFont: #ffffff;
+$darkTurquoise: #25d9c6;
+$darkIntenseGreen: #01b075;
+$darkPurple: #6221ea;
+$darkRed: #fe4838;

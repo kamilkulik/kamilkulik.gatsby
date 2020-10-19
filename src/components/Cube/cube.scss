@@ -30,8 +30,8 @@
     height: var(--vh, 100vh);
     // backface-visibility: hidden;
 
-    box-shadow: 0 0 0 2px;
-    background: white;
+    box-shadow: 0 0 0 2px var(--normalFont);
+    background: var(--background);
 
     &__5,
     &__6 {

@@ -57,8 +57,8 @@
   &::after {
     width: 4rem;
     height: 4rem;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    border-right: 2px solid var(--normalFont);
+    border-bottom: 2px solid var(--normalFont);
     // background-color: none;
     display: inline-block;
     content: "";
