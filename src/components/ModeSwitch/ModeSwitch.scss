@@ -33,18 +33,18 @@
 .slider:before {
   background-color: #333;
   border: 1px solid #000;
-  bottom: 3px;
+  bottom: 4px;
   content: "";
   height: 26px;
+  width: 26px;
   left: 4px;
   position: absolute;
   transition: 0.4s;
-  width: 26px;
   z-index: 421;
 }
 
 input:checked + .slider {
-  background-color: #101211;
+  background-color: #202125;
 }
 
 input:checked + .slider:before {
@@ -54,7 +54,7 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 35px;
 }
 
 .slider.round:before {
