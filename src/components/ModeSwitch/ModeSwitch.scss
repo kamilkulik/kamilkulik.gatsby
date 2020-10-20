@@ -63,9 +63,14 @@ input:checked + .slider:before {
 
 .toggle-moon,
 .toggle-sun {
+  display: inline-block;
   width: 50%;
   text-align: center;
-  padding: 0.25em;
+  padding: 3px;
   position: relative;
   z-index: 420;
+}
+
+input:checked + .toggle-sun {
+  display: none;
 }
