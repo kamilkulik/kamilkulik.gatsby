@@ -9,15 +9,17 @@ const ModeSwitch = () => {
   }, [darkMode])
 
   function getInitialState() {
-    const isReturningUser = "darkMode" in localStorage
-    const savedMode = JSON.parse(localStorage.getItem("darkMode"))
-    const userPrefersDarkMode = getPreferredColourScheme()
-    // check for returning user
-    if (isReturningUser) return savedMode
-    // check if the user has a preference saved on window object
-    else if (userPrefersDarkMode) return true
-    // return light
-    else return false
+    if (typeof localStorage !== `undefined`) {
+      const isReturningUser = "darkMode" in localStorage
+      const savedMode = JSON.parse(localStorage.getItem("darkMode"))
+      const userPrefersDarkMode = getPreferredColourScheme()
+      // check for returning user
+      if (isReturningUser) return savedMode
+      // check if the user has a preference saved on window object
+      else if (userPrefersDarkMode) return true
+      // return light
+      else return false
+    }
   }
 
   function setMode() {
@@ -36,7 +38,9 @@ const ModeSwitch = () => {
   }
 
   function saveModePreference() {
-    localStorage.setItem("darkMode", JSON.stringify(darkMode))
+    if (typeof localStorage !== `undefined`) {
+      localStorage.setItem("darkMode", JSON.stringify(darkMode))
+    }
   }
 
   const handleClick = () => {
