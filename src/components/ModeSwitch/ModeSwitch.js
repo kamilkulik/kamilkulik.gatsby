@@ -49,7 +49,7 @@ const ModeSwitch = () => {
 
   return (
     <div className="switch-container">
-      <label className="switch" htmlFor="checkbox" title="Toggle colour scheme">
+      <label className="switch" htmlFor="checkbox" title="Toggle dark mode">
         <input
           type="checkbox"
           id="checkbox"
