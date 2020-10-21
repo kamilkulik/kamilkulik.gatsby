@@ -4,6 +4,14 @@ import Portfolio from "../Portfolio/PortfolioContainer"
 import ProjectManagement from "../ProjectManagement/ProjectManagement"
 import Contact from "../Contact/Contact"
 
+export const pages = [
+  "home",
+  "project_management",
+  "portfolio",
+  "blog",
+  "contact",
+]
+
 const Content = [
   { number: "1", placeholder: "Home", content: <Home /> },
   {
@@ -18,7 +26,3 @@ const Content = [
 ]
 
 export default Content
-
-// const Blank = () => {
-//   return <p>placeholder</p>
-// }

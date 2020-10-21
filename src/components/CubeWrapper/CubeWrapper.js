@@ -3,7 +3,7 @@ import Container from "../Container/Container"
 import Cube from "../Cube/Cube"
 import AppContext from "../../App-context"
 import useIgnoreMountEffect from "../../Hooks/useIgnoreMountEffect"
-import Content from "./Content"
+import Content, { pages } from "./Content"
 import CompleteSide from "./CompleteSide"
 
 const CubeWrapper = () => {
@@ -28,7 +28,6 @@ const CubeWrapper = () => {
 
   useIgnoreMountEffect(toggleShrink, face)
 
-  const pages = ["home", "project_management", "portfolio", "contact"]
   const activeIndex = pages.indexOf(face)
 
   return (
