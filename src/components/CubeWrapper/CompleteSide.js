@@ -3,6 +3,7 @@ import Side from "../Side/Side"
 import Transition from "./Transition"
 
 const CompleteSide = ({ content, shrink, enableContent, side }) => {
+  console.log(content)
   return (
     <Side sideNumber={side.number}>
       <Transition

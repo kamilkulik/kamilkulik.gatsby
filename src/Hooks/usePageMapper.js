@@ -13,7 +13,12 @@ const usePageMapper = () => {
       setContent(
         Content.map(page => {
           return page.number === "3"
-            ? { number: "3", placeholder: "Blog", content: <Portfolio /> }
+            ? {
+                number: "3",
+                placeholder: "Blog",
+                content: <Portfolio />,
+                name: "blog",
+              }
             : page
         })
       )

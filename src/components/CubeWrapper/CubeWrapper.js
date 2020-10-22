@@ -30,11 +30,8 @@ const CubeWrapper = () => {
   useIgnoreMountEffect(toggleShrink, face)
 
   const mappedContent = usePageMapper()
-  console.log(mappedContent)
 
   const activeIndex = pages.find(page => page.name === face).index
-  console.log(face)
-  console.log(activeIndex)
 
   return (
     <Container>
@@ -49,7 +46,11 @@ const CubeWrapper = () => {
               key={side.number}
             />
           )
-          return shrink ? component : index === activeIndex ? component : null
+          return shrink
+            ? component
+            : index === activeIndex && side.name === face
+            ? component
+            : null
         })}
       </Cube>
     </Container>
@@ -57,3 +58,5 @@ const CubeWrapper = () => {
 }
 
 export default CubeWrapper
+
+// the double transition happens because there are two walls - each of which triggers its own Transition by the content prop

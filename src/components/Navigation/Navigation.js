@@ -4,7 +4,7 @@ import { pages } from "../CubeWrapper/Content"
 
 const Navigation = ({ spinCube }) => {
   const { face } = useContext(AppContext)
-  const activeIndex = pages.find(page => page.name === face).index
+  const activeIndex = pages.indexOf(pages.find(page => page.name === face))
 
   return (
     <nav className="navigation">

@@ -19,7 +19,7 @@ function App() {
   const [inMotion, setInMotion] = useState(false)
 
   const { width, height, mobile, mobileLand, tablet } = useCheckIfMobile()
-
+  // console.log(transitionOut)
   useCheckMobileViewport()
 
   const spinTimeout = 2700

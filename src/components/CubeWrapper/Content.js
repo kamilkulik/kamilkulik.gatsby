@@ -19,14 +19,25 @@ export const pages = [
 ]
 
 const Content = [
-  { number: "1", placeholder: "Home", content: <Home /> },
+  { number: "1", placeholder: "Home", content: <Home />, name: "home" },
   {
     number: "2",
     placeholder: "Project Management",
     content: <ProjectManagement />,
+    name: "project_management",
   },
-  { number: "3", placeholder: "Portfolio", content: <Portfolio /> },
-  { number: "4", placeholder: "Contact", content: <Contact /> },
+  {
+    number: "3",
+    placeholder: "Portfolio",
+    content: <Portfolio />,
+    name: "portfolio",
+  },
+  {
+    number: "4",
+    placeholder: "Contact",
+    content: <Contact />,
+    name: "contact",
+  },
   { number: "5", placeholder: "5", content: <Home /> },
   { number: "6", placeholder: "6", content: <Home /> },
 ]
