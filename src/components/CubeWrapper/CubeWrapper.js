@@ -3,8 +3,9 @@ import Container from "../Container/Container"
 import Cube from "../Cube/Cube"
 import AppContext from "../../App-context"
 import useIgnoreMountEffect from "../../Hooks/useIgnoreMountEffect"
-import Content, { pages } from "./Content"
+import { pages } from "./Content"
 import CompleteSide from "./CompleteSide"
+import usePageMapper from "../../Hooks/usePageMapper"
 
 const CubeWrapper = () => {
   const { face, transitionOut } = useContext(AppContext)
@@ -28,12 +29,17 @@ const CubeWrapper = () => {
 
   useIgnoreMountEffect(toggleShrink, face)
 
-  const activeIndex = pages.indexOf(face)
+  const mappedContent = usePageMapper()
+  console.log(mappedContent)
+
+  const activeIndex = pages.find(page => page.name === face).index
+  console.log(face)
+  console.log(activeIndex)
 
   return (
     <Container>
       <Cube>
-        {Content.map((side, index) => {
+        {mappedContent.map((side, index) => {
           const component = (
             <CompleteSide
               side={side}

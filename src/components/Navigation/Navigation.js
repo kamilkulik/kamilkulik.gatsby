@@ -4,7 +4,7 @@ import { pages } from "../CubeWrapper/Content"
 
 const Navigation = ({ spinCube }) => {
   const { face } = useContext(AppContext)
-  const activeIndex = pages.indexOf(face)
+  const activeIndex = pages.find(page => page.name === face).index
 
   return (
     <nav className="navigation">
@@ -12,13 +12,14 @@ const Navigation = ({ spinCube }) => {
         {pages.map((page, index) => (
           <li
             className={`item${activeIndex === index ? " active" : ""}`}
-            id={page}
-            key={page}
-            onClick={spinCube(page)}
+            id={page.name}
+            key={page.name}
+            onClick={spinCube(page.name)}
           >
             <span className="number">{`0${index + 1}`}</span>
             <span className="description">
-              {page.slice(0, 1).toUpperCase() + page.slice(1).replace("_", " ")}
+              {page.name.slice(0, 1).toUpperCase() +
+                page.name.slice(1).replace("_", " ")}
             </span>
           </li>
         ))}

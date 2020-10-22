@@ -5,11 +5,17 @@ import ProjectManagement from "../ProjectManagement/ProjectManagement"
 import Contact from "../Contact/Contact"
 
 export const pages = [
-  "home",
-  "project_management",
-  "portfolio",
-  "blog",
-  "contact",
+  {
+    name: "home",
+    index: 0,
+  },
+  {
+    name: "project_management",
+    index: 1,
+  },
+  { name: "portfolio", index: 2 },
+  { name: "blog", index: 2 },
+  { name: "contact", index: 3 },
 ]
 
 const Content = [
