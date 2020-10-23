@@ -5,11 +5,12 @@ import House from "../../images/icons/house-door.svg"
 import Easel from "../../images/icons/easel.svg"
 import Chat from "../../images/icons/chat-left-text.svg"
 import People from "../../images/icons/people.svg"
+import Pencil from "../../images/icons/pencil.svg"
+import { pages } from "../CubeWrapper/Content"
 
 const MobileNavigation = ({ spinCube }) => {
   const { face, width, height, mobileLand, tablet } = useContext(AppContext)
-  const pages = ["home", "project_management", "portfolio", "contact"]
-  const activeIndex = pages.indexOf(face)
+  const activeIndex = pages.indexOf(pages.find(page => page.name === face))
 
   const iconWidth =
     0.5 * ((mobileLand ? height / 1.5 : tablet ? height / 2 : width) / 8)
@@ -65,10 +66,26 @@ const MobileNavigation = ({ spinCube }) => {
         />
       </NavigationItem>
       <NavigationItem
+        page={"blog"}
+        title={"Blog"}
+        handleClick={spinCube}
+        active={3 === activeIndex ? "active" : ""}
+      >
+        <Pencil
+          alt={"blog-icon"}
+          width={iconWidth}
+          height={iconWidth}
+          title={"Blog"}
+          className={`mobile-nav__item__ico ${
+            3 === activeIndex ? "active" : ""
+          }`}
+        />
+      </NavigationItem>
+      <NavigationItem
         page={"contact"}
         title={"Contact"}
         handleClick={spinCube}
-        active={3 === activeIndex ? "active" : ""}
+        active={4 === activeIndex ? "active" : ""}
       >
         <Chat
           alt={"contact-icon"}
@@ -76,7 +93,7 @@ const MobileNavigation = ({ spinCube }) => {
           height={iconWidth}
           title={"Contact"}
           className={`mobile-nav__item__ico ${
-            3 === activeIndex ? "active" : ""
+            4 === activeIndex ? "active" : ""
           }`}
         />
       </NavigationItem>

@@ -52,40 +52,46 @@ ul {
 
 .ph-line-nav .effect {
   width: 0px;
-  height: 40px;
+  height: 2rem;
   // bottom: 36px;
   background: transparent;
   border-left: 2px solid var(--normalFont);
 }
 
 /* ----- active ----- */
-// sets effect's position based on which li has active class
+// sets effect's position based on which li has active class, for 5 items's should be spaced 18% apart, for 4 21%
 .ph-line-nav li.active:nth-child(1) ~ .effect {
-  top: 10%;
+  top: 9%;
 }
 .ph-line-nav li.active:nth-child(2) ~ .effect {
-  top: 31%;
+  top: 27%;
 }
 .ph-line-nav li.active:nth-child(3) ~ .effect {
-  top: 52%;
+  top: 45%;
 }
 .ph-line-nav li.active:nth-child(4) ~ .effect {
-  top: 75%;
+  top: 63%;
+}
+.ph-line-nav li.active:nth-child(5) ~ .effect {
+  top: 81%;
 }
 
 /* ----- hover ----- */
-// set's effect position when li is hovered over
+// set's effect position when li is hovered over, for 5 items's should be spaced 18% apart, for 4 21%
 .ph-line-nav li:nth-child(1):hover ~ .effect {
-  top: 10%;
+  top: 9%;
 }
 .ph-line-nav li:nth-child(2):hover ~ .effect {
-  top: 31%;
+  top: 27%;
 }
 .ph-line-nav li:nth-child(3):hover ~ .effect {
-  top: 52%;
+  top: 45%;
 }
 .ph-line-nav li:nth-child(4):hover ~ .effect {
-  top: 75%;
+  top: 63%;
+}
+.ph-line-nav li:nth-child(5):hover ~ .effect {
+  top: 81%;
 }
 
 .number {
