@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
 import Content from "../components/CubeWrapper/Content"
 import AppContext from "../App-context"
-import Portfolio from "../components/Portfolio/PortfolioContainer"
+import Blog from "../components/Blog/Blog"
 
 const usePageMapper = () => {
   const { face } = useContext(AppContext)
@@ -16,7 +16,7 @@ const usePageMapper = () => {
             ? {
                 number: "3",
                 placeholder: "Blog",
-                content: <Portfolio />,
+                content: <Blog />,
                 name: "blog",
               }
             : page
