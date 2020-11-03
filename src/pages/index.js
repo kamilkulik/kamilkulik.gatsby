@@ -19,7 +19,7 @@ function App() {
   const [inMotion, setInMotion] = useState(false)
 
   const { width, height, mobile, mobileLand, tablet } = useCheckIfMobile()
-  // console.log(transitionOut)
+
   useCheckMobileViewport()
 
   const spinTimeout = 2700
@@ -42,7 +42,15 @@ function App() {
 
   return (
     <AppContext.Provider
-      value={{ face, transitionOut, mobile, mobileLand, tablet, width, height }}
+      value={{
+        face,
+        transitionOut,
+        mobile,
+        mobileLand,
+        tablet,
+        width,
+        height,
+      }}
     >
       <SEO title="Home" />
       <CubeWrapper />
