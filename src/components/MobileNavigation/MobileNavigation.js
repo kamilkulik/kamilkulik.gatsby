@@ -8,8 +8,10 @@ import People from "../../images/icons/people.svg"
 import Pencil from "../../images/icons/pencil.svg"
 import { pages } from "../CubeWrapper/Content"
 
-const MobileNavigation = ({ spinCube }) => {
-  const { face, width, height, mobileLand, tablet } = useContext(AppContext)
+const MobileNavigation = () => {
+  const { face, width, height, mobileLand, tablet, spinCube } = useContext(
+    AppContext
+  )
   const activeIndex = pages.indexOf(pages.find(page => page.name === face))
 
   const iconWidth =

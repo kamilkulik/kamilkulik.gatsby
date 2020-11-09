@@ -8,12 +8,10 @@ import "normalize.css"
 import SEO from "../components/seo"
 
 import CubeWrapper from "../components/CubeWrapper/CubeWrapper"
-import Navigation from "../components/Navigation/Navigation"
-import MobileNavigation from "../components/MobileNavigation/MobileNavigation"
 import AppContext from "../App-context"
-import Transition from "../components/CubeWrapper/Transition"
+import NavigationController from "../components/NavigationController/NavigationController"
 
-function App() {
+export function Provider({ children }) {
   const [face, setFace] = useState("home")
   const [transitionOut, setTransitionOut] = useState(false)
   const [inMotion, setInMotion] = useState(false)
@@ -50,18 +48,21 @@ function App() {
         tablet,
         width,
         height,
+        spinCube,
       }}
     >
+      {children}
+    </AppContext.Provider>
+  )
+}
+
+function App() {
+  return (
+    <Provider>
       <SEO title="Home" />
       <CubeWrapper />
-      {mobile || mobileLand || tablet ? (
-        <Transition trigger={!transitionOut} shrink={false} placeholder={null}>
-          <MobileNavigation spinCube={spinCube} />
-        </Transition>
-      ) : (
-        <Navigation spinCube={spinCube} />
-      )}
-    </AppContext.Provider>
+      <NavigationController />
+    </Provider>
   )
 }
 
