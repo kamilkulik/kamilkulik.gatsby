@@ -15,7 +15,7 @@ function SEO({ description, lang, meta, image, title }) {
             defaultTitle: title
             defaultImage: image
             titleTemplate
-            siteurl: url
+            siteUrl
           }
         }
       }

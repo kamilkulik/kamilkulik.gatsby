@@ -1,14 +1,13 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const RenderImage = (file, style, imgStyle) => {
+  if (!file) return null
+  const image = getImage(file.node.childImageSharp)
+  if (!image) return null
   return (
-    <Img
-      fluid={file.node.childImageSharp.fluid}
-      imgStyle={imgStyle}
-      style={style}
-    />
+    <GatsbyImage image={image} alt="" style={style} imgStyle={imgStyle} />
   )
 }
 
@@ -22,9 +21,7 @@ const MyImg = ({ src, style, imgStyle }) => (
               extension
               relativePath
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
               }
             }
           }

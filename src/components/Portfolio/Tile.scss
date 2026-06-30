@@ -81,8 +81,8 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
         // background-color: white;
         object-fit: contain;
         padding: 5%;
-        font-size: 0.6rem;
-        line-height: 0.8rem;
+        font-size: 0.95rem;
+        line-height: 1.3rem;
         color: white;
         text-align: justify;
 
@@ -92,8 +92,8 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
         }
 
         @include respond(big-desktop) {
-          font-size: 0.7rem;
-          line-height: 0.9rem;
+          font-size: 1rem;
+          line-height: 1.4rem;
         }
       }
 
@@ -131,8 +131,8 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
       @include respond(tab-port) {
         &-description {
           grid-area: description;
-          font-size: 0.8rem;
-          line-height: 1rem;
+          font-size: 1.15rem;
+          line-height: 1.5rem;
         }
 
         &__techIco {

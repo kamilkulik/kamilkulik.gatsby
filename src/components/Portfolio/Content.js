@@ -28,14 +28,6 @@ const Content = [
           e-Commerce site for retro games built during SoftServe's web
           development bootcamp.
         </span>
-        <br />
-        <span>
-          <b>Frontend:</b> React & Redux, React Router, Styled Components
-        </span>
-        <br />
-        <span>
-          <b>Backend:</b> Node, Express, Mongoose, Passport, Jest
-        </span>
       </React.Fragment>
     ),
     technologies: [
@@ -61,10 +53,6 @@ const Content = [
           React's conditional rendering to help performance. Fully responsive on
           every device.
         </span>
-        <br />
-        <span>
-          <b>Stack:</b> React, Gatsby, SASS
-        </span>
       </React.Fragment>
     ),
     technologies: [
@@ -86,14 +74,6 @@ const Content = [
           React site for my brother's wedding using Google Maps API. Fully
           responsive on every device. Node backend for form handling and email
           notifications. MongoDB for storing confirmed guests.
-        </span>
-        <br />
-        <span>
-          <b>Frontend:</b> React, SASS,
-        </span>
-        <br />
-        <span>
-          <b>Backend:</b> Node, Express, Mailjet, MongoDB
         </span>
       </React.Fragment>
     ),
@@ -122,10 +102,6 @@ const Content = [
           recognition and machine learning, app could interpret pictures taken
           or selected from phone's library.
         </span>
-        <br />
-        <span>
-          <b>Frontend:</b> React Native, Redux, React Navigation
-        </span>
       </React.Fragment>
     ),
     technologies: [
@@ -147,10 +123,6 @@ const Content = [
           Ongoing development passion project for managing investments. The goal
           of the app is to allow user to quantitatively analyse assets, allocate
           funds to each asset selected and track investments.
-        </span>
-        <br />
-        <span>
-          <b>Frontend:</b> React Native, Redux, React Router, MaterialUI, Jest
         </span>
       </React.Fragment>
     ),
@@ -179,10 +151,6 @@ const Content = [
           Expense tracker app written in React. Login via Google. Expenses are
           written to firebase database. Filter by different fields.
         </span>
-        <br />
-        <span>
-          <b>Stack:</b> SASS, React, Redux, React Router, Firebase, Jest
-        </span>
       </React.Fragment>
     ),
     technologies: [
@@ -210,10 +178,6 @@ const Content = [
           Fully responsive web page for a tour operator. Beautiful design,
           styling of every element of the page.
         </span>
-        <br />
-        <span>
-          <b>Stack:</b> HTML5, CSS, SASS
-        </span>
       </React.Fragment>
     ),
     technologies: [
@@ -237,10 +201,6 @@ const Content = [
           Commercial project in Wix. Features home page, testimonials, about me
           and a contact form. The website advertises the service of detailed
           used car inspection, primarily before used car purchase.
-        </span>
-        <br />
-        <span>
-          <b>Stack:</b> Wix
         </span>
       </React.Fragment>
     ),

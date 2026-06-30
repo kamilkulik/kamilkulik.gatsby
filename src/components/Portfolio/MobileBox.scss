@@ -65,7 +65,7 @@
 
   &__description {
     padding: 5% 10%;
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     color: white;
 
     & > span {
@@ -76,7 +76,7 @@
     @include respond(phone-land) {
       grid-area: description;
       padding: 0 5%;
-      font-size: 0.9rem;
+      font-size: 1.05rem;
     }
   }
 
