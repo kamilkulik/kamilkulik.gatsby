@@ -46,7 +46,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "pnpm": {
-    "onlyBuiltDependencies": [
+    "onlyBuiltDependcies": [
       "sharp",
       "gatsby",
       "gatsby-plugin-sharp",
