@@ -38,7 +38,7 @@ const Content = [
       { img: node, alt: "node icon" },
       { img: jest, alt: "jest" },
     ],
-    links: ["https://github.com/kamilkulik/retrovania"],
+    links: [],
   },
   {
     img: "Portfolio.png",
@@ -85,10 +85,7 @@ const Content = [
       { img: node, alt: "node icon" },
       { img: mongoDb, alt: "mongoDb icon" },
     ],
-    links: [
-      "https://weselekulikow.pl",
-      "https://github.com/kamilkulik/weselekulikow.pl",
-    ],
+    links: ["https://we-sel-eku-lik-ow.netlify.app/"],
   },
   {
     img: "isItHealthy.png",
@@ -110,7 +107,7 @@ const Content = [
       { img: reactNavigation, alt: "react navigation icon" },
       { img: redux, alt: "redux icon" },
     ],
-    links: ["https://github.com/kamilkulik/isItHealthy-FE"],
+    links: [],
   },
   {
     img: "InvestmentFramework.png",
@@ -135,10 +132,7 @@ const Content = [
       { img: materialui, alt: "material ui icon" },
       { img: jest, alt: "jest" },
     ],
-    links: [
-      "https://investmentframework.com",
-      "https://github.com/kamilkulik/investmentFramework",
-    ],
+    links: ["https://investmentframework.com"],
   },
   {
     img: "Expensify.png",
@@ -162,10 +156,7 @@ const Content = [
       { img: firebase, alt: "firebase icon" },
       { img: jest, alt: "jest" },
     ],
-    links: [
-      "https://expensify-react-redux-kk.herokuapp.com/",
-      "https://github.com/kamilkulik",
-    ],
+    links: ["https://expensify-react-redux-kk.herokuapp.com/"],
   },
   {
     img: "Natours.png",
@@ -185,10 +176,7 @@ const Content = [
       { img: css3, alt: "css3 icon" },
       { img: scss, alt: "sass icon" },
     ],
-    links: [
-      "https://kamilkulik.github.io/natours/",
-      "https://github.com/kamilkulik/Expensify",
-    ],
+    links: ["https://kamilkulik.github.io/natours/"],
   },
   {
     img: "AutoCheck24.png",
