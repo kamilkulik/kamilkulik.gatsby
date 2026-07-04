@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "sass:list";
+@use "../../Styles/shared" as *;
+
 .carousel-mobile {
   position: absolute;
   height: 100%;
@@ -98,11 +102,11 @@
 }
 
 @for $i from 1 through 9 {
-  $n: random(6);
+  $n: math.random(6);
 
   .slide--#{$i} {
     &.carousel-mobile {
-      background-color: nth($colors, $n);
+      background-color: list.nth($colors, $n);
     }
 
     & .carousel-mobile__heading {
@@ -111,7 +115,7 @@
       text-transform: uppercase;
       text-align: right;
       // color: white;
-      color: nth($colors, $n);
+      color: list.nth($colors, $n);
       position: absolute;
       top: 0%;
       left: 0%;

@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "sass:list";
+@use "../../Styles/shared" as *;
+
 .pmCard {
   position: absolute;
   width: 100%;
@@ -37,8 +41,8 @@
 
   &__flag {
     grid-area: flag;
-    $n: random(5);
-    background-color: nth($colors, $n);
+    $n: math.random(5);
+    background-color: list.nth($colors, $n);
 
     @include center-flex;
 

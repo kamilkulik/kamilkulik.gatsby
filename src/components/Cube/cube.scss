@@ -1,3 +1,5 @@
+@use "../../Styles/shared" as *;
+
 @function pow($number, $exponent) {
   $value: 1;
 
@@ -44,9 +46,11 @@
       $adjustedVh: calc(0.5 * var(--vh));
 
       &__#{$i + 1} {
-        // background-color: nth($colors, $i);
-        transform: if($i < 4, rotateY($i * 90deg), rotateX(pow(-1, $i) * 90deg))
-          translateZ(if($i < 4, $adjustedVw, $adjustedVh));
+        @if $i < 4 {
+          transform: rotateY($i * 90deg) translateZ($adjustedVw);
+        } @else {
+          transform: rotateX(pow(-1, $i) * 90deg) translateZ($adjustedVh);
+        }
       }
     }
 

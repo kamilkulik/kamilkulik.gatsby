@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "sass:list";
+@use "../../Styles/shared" as *;
+
 $tilePadding: 1rem;
 $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 
@@ -7,8 +11,8 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
   border-radius: 0.5rem;
 
   @for $i from 1 through 9 {
-    $no: random(2);
-    $deg: random(2);
+    $no: math.random(2);
+    $deg: math.random(2);
 
     &--#{$i} {
       @include ranEff($no, $deg);
@@ -173,12 +177,12 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 }
 
 @for $i from 1 through 9 {
-  $n: random(6);
+  $n: math.random(6);
 
   .tile--#{$i} {
     & .tile__side--front,
     & .tile__side--back {
-      background-color: nth($colors, $n);
+      background-color: list.nth($colors, $n);
 
       &__heading {
         font-size: 1.4rem;
@@ -186,7 +190,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
         text-transform: uppercase;
         text-align: right;
         // color: white;
-        color: nth($colors, $n);
+        color: list.nth($colors, $n);
         position: absolute;
         bottom: 0%;
         right: 0%;

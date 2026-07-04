@@ -1,3 +1,5 @@
+@use "sass:list";
+
 $transZ: 50vw;
 $transZvh: 50vh;
 @mixin transp($axis, $rotate) {
@@ -20,14 +22,14 @@ $transZvh: 50vh;
   );
 
   & .tile__side--back {
-    transform: nth($rD, $index) + nth(nth($rDeg, $deg), 1);
+    transform: list.nth($rD, $index) + list.nth(list.nth($rDeg, $deg), 1);
   }
   &:hover .tile__side--front {
-    transform: nth($rD, $index) + nth(nth($rDeg, $deg), 2);
+    transform: list.nth($rD, $index) + list.nth(list.nth($rDeg, $deg), 2);
     transition: all 1s cubic-bezier(0.62, -0.42, 0.36, 0.99);
   }
   &:hover .tile__side--back {
-    transform: nth($rD, $index) + nth(nth($rDeg, $deg), 3);
+    transform: list.nth($rD, $index) + list.nth(list.nth($rDeg, $deg), 3);
     transition: all 1s cubic-bezier(0.62, -0.42, 0.36, 0.99);
   }
 }

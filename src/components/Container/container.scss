@@ -1,3 +1,5 @@
+@use "../../Styles/shared" as *;
+
 .magic {
   height: 100vh;
   height: var(--vh, 100vh);
