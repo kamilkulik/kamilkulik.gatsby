@@ -18,27 +18,30 @@ import wix from "../../images/wix-icon.png"
 
 const Content = [
   {
-    img: "Retrovania.png",
-    flag: "Retrovania",
-    title: "Retrovania",
-    alt: "e-Commerce site built during SoftServe's web development bootcamp",
+    img: "evening_whisper.png",
+    flag: "Evening_Whisper",
+    title: "Evening_Whisper",
+    alt: "Evening Whisper — a daily SMS service that stirs nostalgia",
     description: (
       <React.Fragment>
         <span>
-          e-Commerce site for retro games built during SoftServe's web
-          development bootcamp.
+          Evening Whisper is a subscription SMS service that delivers a single
+          thoughtfully crafted message each day — short prose designed to stir
+          nostalgia, spark emotion, and leave the reader quietly hooked,
+          returning for tomorrow's whisper.
         </span>
       </React.Fragment>
     ),
     technologies: [
+      { img: scss, alt: "sass icon" },
+      { img: js, alt: "javascript icon" },
       { img: react, alt: "react icon" },
       { img: redux, alt: "redux icon" },
       { img: reactRouter, alt: "react router icon" },
-      { img: mongoDb, alt: "mongoDb icon" },
-      { img: node, alt: "node icon" },
+      { img: materialui, alt: "material ui icon" },
       { img: jest, alt: "jest" },
     ],
-    links: [],
+    links: ["https://eve-nin-gwhi-sper.netlify.app"],
   },
   {
     img: "Portfolio.png",
@@ -110,29 +113,27 @@ const Content = [
     links: [],
   },
   {
-    img: "InvestmentFramework.png",
-    flag: "Investment_Framework",
-    title: "Investment_Framework",
-    alt: "Ongoing project for Investment Management",
+    img: "Retrovania.png",
+    flag: "Retrovania",
+    title: "Retrovania",
+    alt: "e-Commerce site built during SoftServe's web development bootcamp",
     description: (
       <React.Fragment>
         <span>
-          Ongoing development passion project for managing investments. The goal
-          of the app is to allow user to quantitatively analyse assets, allocate
-          funds to each asset selected and track investments.
+          e-Commerce site for retro games built during SoftServe's web
+          development bootcamp.
         </span>
       </React.Fragment>
     ),
     technologies: [
-      { img: scss, alt: "sass icon" },
-      { img: js, alt: "javascript icon" },
       { img: react, alt: "react icon" },
       { img: redux, alt: "redux icon" },
       { img: reactRouter, alt: "react router icon" },
-      { img: materialui, alt: "material ui icon" },
+      { img: mongoDb, alt: "mongoDb icon" },
+      { img: node, alt: "node icon" },
       { img: jest, alt: "jest" },
     ],
-    links: ["https://investmentframework.com"],
+    links: [],
   },
   {
     img: "Expensify.png",
