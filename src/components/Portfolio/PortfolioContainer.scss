@@ -42,17 +42,17 @@ $gridHeight: calc(100% / #{$rowNum} - #{$gap} * (#{$rowNum} - 1) / #{$rowNum});
   }
 
   &--mobile {
-    padding: 6% 7%;
-    height: 92%;
+    padding: 4% 7%;
+    height: 75%;
     width: 100%;
-    align-self: flex-start;
-    // margin-top: 5%;
+    align-self: center;
     overflow: hidden !important;
 
     @include respond(phone-land) {
       padding: 0%;
       height: 100%;
       width: 90%;
+      align-self: flex-start;
     }
   }
 }

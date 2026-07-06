@@ -32,8 +32,7 @@ const Content = [
         <span>
           Evening Whisper is a subscription SMS service that delivers a single
           thoughtfully crafted message each day — short prose designed to stir
-          nostalgia, spark emotion, and leave the reader quietly hooked,
-          returning for tomorrow's whisper.
+          nostalgia and spark emotion.
         </span>
       </React.Fragment>
     ),
@@ -102,9 +101,9 @@ const Content = [
     description: (
       <React.Fragment>
         <span>
-          React Native front end for a pair programming project. Thanks to image
-          recognition and machine learning, app could interpret pictures taken
-          or selected from phone's library.
+          Image recognition and machine learning, app could interpret pictures
+          taken or selected from phone's library and tell if the food is healthy
+          or not.
         </span>
       </React.Fragment>
     ),
@@ -124,8 +123,9 @@ const Content = [
     description: (
       <React.Fragment>
         <span>
-          e-Commerce site for retro games built during SoftServe's web
-          development bootcamp.
+          e-Commerce site for retro games. Fully responsive on every device.
+          Node backend for form handling and email notifications. MongoDB for
+          data persistance.
         </span>
       </React.Fragment>
     ),
@@ -161,7 +161,7 @@ const Content = [
       { img: firebase, alt: "firebase icon" },
       { img: jest, alt: "jest" },
     ],
-    links: ["https://expensify-react-redux-kk.herokuapp.com/"],
+    links: [],
   },
   {
     img: "Natours.png",
@@ -191,9 +191,9 @@ const Content = [
     description: (
       <React.Fragment>
         <span>
-          Commercial project in Wix. Features home page, testimonials, about me
-          and a contact form. The website advertises the service of detailed
-          used car inspection, primarily before used car purchase.
+          Features home page, testimonials, about me and a contact form. The
+          website advertises the service of detailed used car inspection,
+          primarily before used car purchase.
         </span>
       </React.Fragment>
     ),

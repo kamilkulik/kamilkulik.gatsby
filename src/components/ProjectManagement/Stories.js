@@ -9,18 +9,18 @@ const Stories = [
     tools: "Jira, Confluence, Fun Retro",
     description: (
       <React.Fragment>
-        <p> · One of Challenges:</p>
+        <p>One of Challenges:</p>
         <span>Team of great people showing not so great results</span>
         <br />
-        <p> · Approach:</p>
+        <p>Approach:</p>
         <span>
           Retrospectives for each team individually and look for patterns
         </span>
         <br />
-        <p> · Wrinkle:</p>
+        <p>Wrinkle:</p>
         <span> Reluctance to share negative feedback openly</span>
         <br />
-        <p> · Final solution:</p>
+        <p>Final solution:</p>
         <span>
           Introduction of funretro.io for sharing anonymous opinions. Dedicated
           JIRA Kanban board to show progress on retro-driven actions. Retros
@@ -37,13 +37,13 @@ const Stories = [
     tools: "Jira, Confluence",
     description: (
       <React.Fragment>
-        <p> · One of Challenges:</p>
+        <p>One of Challenges:</p>
         <span>Tight budget despite using a T&M contract</span>
         <br />
-        <p> · Approach:</p>
+        <p>Approach:</p>
         <span>Carefully plan and update assumptions & estimates</span>
         <br />
-        <p> · Solution:</p>
+        <p>Solution:</p>
         <span>
           Contract detailed assumptions about client's infrastructure and
           environment. We kicked-off with a three day discovery after which
@@ -63,16 +63,16 @@ const Stories = [
     tools: "Ms Office",
     description: (
       <React.Fragment>
-        <p> · One of Challenges:</p>
+        <p>One of Challenges:</p>
         <span>Ensure visibility of progress on key projects</span>
         <br />
-        <p> · Approach:</p>
+        <p>Approach:</p>
         <span>
           explore key stakeholders’ expectations and involve them in building
           reporting
         </span>
         <br />
-        <p> · Solution:</p>
+        <p>Solution:</p>
         <span>
           Reporting framework consisting of bi-weekly calls, bi-weekly
           distributed dashboard with RAG lights for each project and agreed
@@ -90,16 +90,16 @@ const Stories = [
     tools: "Paper, megaphone",
     description: (
       <React.Fragment>
-        <p> · Background:</p>
+        <p>Background:</p>
         <span>We were shooting a video for a sock brand</span>
         <br />
-        <p> · One of Challenges:</p>
+        <p>One of Challenges:</p>
         <span>
           How to (cheaply) turn a camping site into a military base and portray
           students (actors) as military personnel
         </span>
         <br />
-        <p> · Solution:</p>
+        <p>Solution:</p>
         <span>
           We hired a military enthusiast organising airsoft battles to
           camouflage camp houses as barracks, provide guns and create backdrops
