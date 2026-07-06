@@ -42,6 +42,7 @@ const PmCard = ({ story }) => {
             <p>{story.tools}</p>
           </div>
         </header>
+        <div className="pmCard__separator" role="presentation" />
         <main className="pmCard__main">
           <div className="pmCard__main-wrapper">{story.description}</div>
         </main>
