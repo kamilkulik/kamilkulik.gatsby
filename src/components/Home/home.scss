@@ -32,13 +32,11 @@ $angle: 45deg;
       & h4 {
         background-image: linear-gradient(
           $angle,
-          $darkBlue,
           $purple,
           $red,
-          $darkBlue,
           $purple,
           $red,
-          $darkBlue
+          $purple
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

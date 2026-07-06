@@ -72,6 +72,13 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 
       padding: 1px;
 
+      &.tile__side--back--wide {
+        grid-template-areas:
+          "one"
+          "three";
+        grid-template-columns: 100%;
+      }
+
       @include respond(tab-port) {
         grid-template-areas:
           "description"
@@ -177,7 +184,7 @@ $tileGridHeight: calc(100% - 2 * #{$tilePadding});
 }
 
 @for $i from 1 through 9 {
-  $n: math.random(6);
+  $n: math.random(4);
 
   .tile--#{$i} {
     & .tile__side--front,

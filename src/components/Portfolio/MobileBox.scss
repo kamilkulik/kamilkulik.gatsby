@@ -102,7 +102,7 @@
 }
 
 @for $i from 1 through 9 {
-  $n: math.random(6);
+  $n: math.random(4);
 
   .slide--#{$i} {
     &.carousel-mobile {

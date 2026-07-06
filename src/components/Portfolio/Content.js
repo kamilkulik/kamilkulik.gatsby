@@ -15,6 +15,11 @@ import reactNavigation from "../../images/react-navigation-icon.svg"
 import redux from "../../images/Redux-icon.png"
 import js from "../../images/js-icon.png"
 import wix from "../../images/wix-icon.png"
+import nextjs from "../../images/nextjs-icon.svg"
+import prisma from "../../images/prisma-icon.svg"
+import stripe from "../../images/stripe-icon.svg"
+import twilio from "../../images/twilio-icon.svg"
+import supabase from "../../images/supabase-icon.svg"
 
 const Content = [
   {
@@ -33,13 +38,12 @@ const Content = [
       </React.Fragment>
     ),
     technologies: [
-      { img: scss, alt: "sass icon" },
-      { img: js, alt: "javascript icon" },
       { img: react, alt: "react icon" },
-      { img: redux, alt: "redux icon" },
-      { img: reactRouter, alt: "react router icon" },
-      { img: materialui, alt: "material ui icon" },
-      { img: jest, alt: "jest" },
+      { img: nextjs, alt: "next.js icon" },
+      { img: node, alt: "node.js icon" },
+      { img: prisma, alt: "prisma icon" },
+      { img: stripe, alt: "stripe icon" },
+      { img: twilio, alt: "twilio icon" },
     ],
     links: ["https://eve-nin-gwhi-sper.netlify.app"],
   },
@@ -193,7 +197,11 @@ const Content = [
         </span>
       </React.Fragment>
     ),
-    technologies: [{ img: wix, alt: "wix icon" }],
+    technologies: [
+      { img: nextjs, alt: "next.js icon" },
+      { img: react, alt: "react icon" },
+      { img: supabase, alt: "supabase icon" },
+    ],
     links: ["https://www.auto-check24.pl"],
   },
 ]

@@ -174,7 +174,7 @@
   &,
   &:link,
   &:visited {
-    $n: math.random(5);
+    $n: math.random(4);
     background-color: list.nth($colors, $n);
     color: white;
     border: none;

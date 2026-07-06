@@ -5,20 +5,27 @@ import AppContext from "../../App-context"
 const BackSide = ({ description, technologies, links }) => {
   const { mobile, tablet } = useContext(AppContext)
 
+  const liveLinks =
+    links && links.filter(link => !link.includes("github.com/kamilkulik"))
+  const showLinkColumn = !mobile && !tablet && liveLinks && liveLinks.length > 0
+
   return (
-    <div className="tile__side tile__side--back">
-      {!mobile && !tablet && (
+    <div
+      className={`tile__side tile__side--back${
+        showLinkColumn ? "" : " tile__side--back--wide"
+      }`}
+    >
+      {showLinkColumn && (
         <div className="tile__side--back__link">
-          {links &&
-            links.map((link, index) => (
-              <Button
-                key={index}
-                title={
-                  link.includes("github.com/kamilkulik") ? "GitHub" : "Live"
-                }
-                url={link}
-              />
-            ))}
+          {links.map((link, index) => (
+            <Button
+              key={index}
+              title={
+                link.includes("github.com/kamilkulik") ? "GitHub" : "Live"
+              }
+              url={link}
+            />
+          ))}
         </div>
       )}
       <div className="tile__side--back-description">{description}</div>
